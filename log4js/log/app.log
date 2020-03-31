@@ -1,0 +1,83 @@
+[2020-03-31T21:29:10.340] [ERROR] app - Something went wrong: Error: Not Found
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\app.js:34:15
+    at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:47:12) {
+  status: 404
+}
+[2020-03-31T21:37:57.745] [ERROR] app - Something went wrong: Error: Not Found
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\app.js:35:15
+    at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:47:12) {
+  status: 404
+}
+[2020-03-31T21:44:01.570] [DEBUG] index - I'm in the index module.
+[2020-03-31T21:45:32.801] [DEBUG] index - I'm in the index module~~.
+[2020-03-31T21:53:07.884] [DEBUG] index - I'm in the index module.
+[2020-03-31T21:53:29.047] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:54:37.050] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:54:49.781] [DEBUG] index - I'm in the index module.
+[2020-03-31T21:54:54.552] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:55:03.507] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:55:09.536] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:55:16.634] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:55:16.648] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:55:38.317] [ERROR] app - Something went wrong: Error: Not Found
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\app.js:35:15
+    at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:47:12) {
+  status: 404
+}
+[2020-03-31T21:55:42.400] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:57:27.735] [DEBUG] index - I'm in the index module.
+[2020-03-31T21:57:32.990] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:58:13.175] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T21:58:59.704] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T22:00:17.465] [ERROR] app - Something went wrong: [Error: ENOENT: no such file or directory, open 'C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\data\asd'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\세컨드\\Desktop\\study\\Node.JS\\testlog4js\\Nodejsfolder\\Node.js\\log4js\\data\\asd'
+}
+[2020-03-31T22:02:33.421] [DEBUG] index - I'm in the index module.
+[2020-03-31T22:02:39.369] [ERROR] app - Something went wrong: Error: Something Broke!
+    at ReadFileContext.callback (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\controller\page.js:46:27)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:256:13) {
+  status: 500
+}
+[2020-03-31T22:02:50.777] [ERROR] app - Something went wrong: Error: Not Found
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\app.js:35:15
+    at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:635:15
+    at next (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\세컨드\Desktop\study\Node.JS\testlog4js\Nodejsfolder\Node.js\log4js\node_modules\express\lib\router\index.js:47:12) {
+  status: 404
+}
+[2020-03-31T22:02:58.792] [DEBUG] index - I'm in the index module.
+[2020-03-31T22:03:03.402] [DEBUG] topic - I'm in the topic module.
+[2020-03-31T22:03:03.415] [DEBUG] index - I'm in the index module.
