@@ -1,0 +1,182 @@
+<table class="table" id="myTable" style="text-align: center;">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col" style="display: none;">내용</th>
+            <th scope="col">글쓴이</th>
+            <th scope="col">작성일</th>
+            <th scope="col">조회수</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#staticBackdrop">
+    글작성
+</button>
+
+<!-- create Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">글작성</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><input type="text" name="createWriter" placeholder="작성자" style="width: 466px"></p>
+                <p><input type="text" name="createTitle" placeholder="제목" style="width: 466px"></p>
+                <p><textarea name="createDescription" placeholder="내용" style="width: 466px; height: 150px;"></textarea></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalClear()">닫기</button>
+                <input type="button" class="btn btn-dark" value="작성하기" onclick="createPost()">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- update Modal -->
+<div class="modal fade" id="updateModal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">게시물</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><input type="text" name="contentsNo" style="display: none;"></p>
+                <p><input type="text" name="writer" placeholder="작성자" style="width: 466px"></p>
+                <p><input type="text" name="title" placeholder="제목" style="width: 466px"></p>
+                <p><textarea name="description" placeholder="내용" style="width: 466px; height: 150px;"></textarea></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalClear()">닫기</button>
+                <input type="button" class="btn btn-dark" value="수정하기" onclick="updatePost()">
+                <input type="button" class="btn btn-dark" value="삭제하기" onclick="deletePost()">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        init();
+    })
+
+    function init() {
+        readDB();
+        clickTable();
+    }
+
+    // 데이터베이스 읽기
+    function readDB() {
+        axios.get('/contents')
+            .then((result) => {
+                writePost(result.data['resultValue']);
+            }).catch((err) => {
+                alert(err);
+            })
+    }
+
+    // 테이블에 db의 게시물 쓰기
+    function writePost(rows) {
+        var count = 1
+        for (var line = 0; line < rows.length; line++) {
+            var newPost = "<tr class='clickable-row'>"
+            for (var key in rows[line]) {
+                if (key === 'Contents') {
+                    newPost += "<td style='display: none;'>" + rows[line][key] + "</td>"
+                    continue
+                }
+                newPost += "<td>" + rows[line][key] + "</td>"
+            }
+            newPost += "</tr>"
+            $("table.table > tbody:last").append(newPost);
+            count += 1
+        }
+    }
+
+    // 게시물 쓰기
+    function createPost() {
+        let data = {
+            "contentNo": 0,
+            "title": $('input[name=createTitle]').val(),
+            "contents": $('textarea[name=createDescription]').val(),
+            "writer": $('input[name=createWriter]').val(),
+            "createDate": "now()",
+            "viewCount": 0
+        }
+        axios.post('/contents', data)
+            .then((result) => {
+                modalClear()
+                location.href = '/';
+            }).catch((err) => {
+                alert(err)
+            })
+    }
+
+    function modalClear() {
+        $("input[name='writer']").val('')
+        $("input[name='title']").val('')
+        $("textarea[name='description']").val('')
+        $(".modal").modal("hide");
+    }
+
+    function clickTable() {
+        $("#myTable").on("click", ".clickable-row", function(event) {
+           var tdArr = new Array();
+           var rowData = $(this).children();
+           var postNo = rowData.eq(0).text();
+           var postWriter = rowData.eq(3).text();
+           var postTitle = rowData.eq(1).text();
+           var postDescription = rowData.eq(2).text();
+           $("input[name='contentsNo']").val(postNo);
+           $("input[name='writer']").val(postWriter);
+           $("input[name='title']").val(postTitle);
+           $("textarea[name='description']").val(postDescription);
+           $("#updateModal").modal("show");
+        })
+    }
+
+    function updatePost() {
+        let data = {
+            "contentNo": $('input[name=contentsNo]').val(),
+            "title": $('input[name=title]').val(),
+            "contents": $('textarea[name=description]').val(),
+            "writer": $('input[name=writer]').val(),
+            "createDate": "now()",
+            "viewCount": 0
+        }
+        
+        axios.put('/contents', data)
+            .then((result) => {
+                modalClear()
+                location.href = '/';
+            }).catch((err) => {
+                alert(err)
+            })
+    }
+    
+    function deletePost() {
+        axios.delete('/contents', {data: {"contentNo": $('input[name=contentsNo]').val()}})
+            .then((result) => {
+                modalClear()
+                location.href = '/';
+            }).catch((err) => {
+                alert(err)
+            })
+    }
+</script>
