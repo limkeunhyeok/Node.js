@@ -12,7 +12,6 @@
     <tbody>
     </tbody>
 </table>
-</table>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#staticBackdrop">
@@ -93,7 +92,6 @@
 
     // 테이블에 db의 게시물 쓰기
     function writePost(rows) {
-        var count = 1
         for (var line = 0; line < rows.length; line++) {
             var newPost = "<tr class='clickable-row'>"
             for (var key in rows[line]) {
@@ -105,7 +103,6 @@
             }
             newPost += "</tr>"
             $("table.table > tbody:last").append(newPost);
-            count += 1
         }
     }
 

@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시세 테이블</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        body    { padding:50px; }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>시세 테이블</h2>
+        <pre>암호화폐별 현 시세를 보여주는 테이블입니다.</pre>
+    </div>
+    <table class="table" id="myTable" style="text-align: center;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">암호화폐</th>
+                <th scope="col">시가</th>
+                <th scope="col">고가</th>
+                <th scope="col">저가</th>
+                <th scope="col">종가</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log('start!')
+        axios.get('/api')
+            .then((result) => {
+                writeTable(result.data.resultValue)
+            }).catch((err) => {
+                alert(err);
+            });
+    });
+
+    function writeTable(apiData) {
+        for (var i = 0; i < apiData.length; i++) {
+            var newRow = "<tr>";
+            for(var key in apiData[i]) {
+                newRow += "<td>" + apiData[i][key] + "</td>";
+            }
+            newRow += "</tr>";
+            $("table.table > tbody:last").append(newRow)
+        }
+    }
+</script>
+</html>
