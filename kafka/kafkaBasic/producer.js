@@ -11,20 +11,14 @@ let obj = {
     data: "coin"
 };
 
-let obj2 = {
-    dateTime: "2020-04-14",
-    type: "test2",
-    data: "btc,eth..."
-};
-
 producer.on("ready", () => {
     console.log('Example Kafka is ready!!');
     
     setInterval(() => {
-        let payloads = [
-            { topic: "test", messages: JSON.stringify(obj) },
-            { topic: "test2", messages: JSON.stringify(obj2)}
-        ];
+        let payloads = [{
+            topic: "test",
+            messages: JSON.stringify(obj)
+        }];
 
         producer.send(payloads, (err, data) => {
             if (err) {
