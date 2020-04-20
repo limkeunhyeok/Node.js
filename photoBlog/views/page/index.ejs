@@ -1,0 +1,89 @@
+<div class="container">
+	<div class="gallery">
+	</div>
+
+	<div class="modal" tabindex="-1" id="postImage" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">사진보기</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img id="image" src="" alt="">
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		추가하기
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">추가하기</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/contents/upload" method="post" enctype="multipart/form-data">
+						<input type="file" name="userFile">
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of container -->
+
+<script type="text/javascript">
+	$(document).ready(function () {
+        console.log('start!')
+        readImageFile();
+	});
+	
+
+	function readImageFile() {
+		axios.post('/contents')
+            .then((result) => {
+                writeGallery(result.data.resultValue)
+            }).catch((err) => {
+                alert(err);
+            });
+	};
+
+	function writeGallery(files) {
+		for (var i = 0; i < files.length; i++) {
+			var newItem = `
+			<div class="gallery-item" id="${files[i]}" tabindex="0" onclick="openImage('${files[i]}')">
+				<img src="images/gallery/${files[i]}" class="gallery-image" alt="">
+				<div class="gallery-item-type">
+					<span class="visually-hidden">Gallery</span>
+				</div>
+				<div class="gallery-item-info">
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 0</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+				</div>
+			</div>
+			`
+            $("#body-top > main > div > div.gallery").append(newItem);
+		};
+		$("#body-top > header > div > div > div.profile-stats > ul > li:nth-child(1) > span").html(files.length)
+	};
+	function openImage(imageId) {
+		$(".modal-body > img").attr("src", `/images/gallery/${imageId}`);
+		$(".modal-body > img").css("width", "100%")
+		$("#postImage").modal("show")
+	}
+</script>
