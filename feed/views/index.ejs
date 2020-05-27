@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Node.js</h1>
+    <h3 >Feed Sample Test</h3>
+    <div id="xml2js">
+        <h4>xml2js feed</h4>
+    </div>
+</body>
+<script type="text/javascript">
+    axios.post('/xml2js')
+        .then((res) => {
+            writeFeed(res.data)
+        }).catch((err) => {
+            alert(err)
+        })
+    
+    function writeFeed(items) {
+        var target = document.getElementById('xml2js');
+        for (var item in items) {
+            var link = document.createElement("a");
+            var title = items[item].title[0];
+            link.href = items[item].link[0];
+            link.append(title);
+            target.appendChild(link);
+            target.appendChild(document.createElement('br'));
+        };
+    };
+</script>
+</html>

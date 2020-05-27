@@ -6,7 +6,7 @@ app.use('/d3', Express.static(__dirname + '/d3'));
 
 app.set('view engine', 'ejs');
 app.set('views', './views')
-
+    
 
 app.get('/', (req, res) => {
     res.render('index');
