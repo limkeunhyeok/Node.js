@@ -1,0 +1,39 @@
+{
+  "topic": [
+    {
+      "id": 1,
+      "title": "lowdb",
+      "description": "lowdb is ...",
+      "author": 1
+    },
+    {
+      "id": "SMtO9WY3VU",
+      "title": "PostgreSQL",
+      "description": "PostgreSQL is ...",
+      "author": "3pIuUwPN9"
+    },
+    {
+      "id": "ur8TkdNYiJ",
+      "title": "MSSQL",
+      "description": "MSSQL is ...",
+      "author": "3IbTMI4GN"
+    }
+  ],
+  "author": [
+    {
+      "id": 1,
+      "name": "LKH",
+      "profile": "developer"
+    },
+    {
+      "id": "3pIuUwPN9",
+      "name": "LKH2",
+      "profile": "data scientist"
+    },
+    {
+      "id": "3IbTMI4GN",
+      "name": "LKH3",
+      "profile": "db admin"
+    }
+  ]
+}
