@@ -1,3 +1,5 @@
+'use strict'
+
 const http = require('http');
 const url = require('url');
 const querystring = require('querystring');
@@ -9,6 +11,7 @@ var mapResponse = {};
 var mapRR = {};
 var index = 0;
 
+// HTTP 서버 생성
 var server = http.createServer((req, res) => {
     var method = req.method;
     var uri = url.parse(req.url, true);
@@ -18,22 +21,25 @@ var server = http.createServer((req, res) => {
         var body = "";
 
         req.on('data', function(data) {
+            body += data;
+        });
+        req.on('end', function() {
             var params;
-
             if (req.headers['content-type'] == "application/json") {
                 params = JSON.parse(body);
             } else {
                 params = querystring.parse(body);
             }
 
-            onRequest(req, method, pathname, params);
+            onRequest(res, method, pathname, params);
         });
     } else {
-        onRequest(req, method, pathname, uri.query);
+        onRequest(res, method, pathname, uri.query);
     }
 }).listen(8000, () => {
     console.log('listen', server.address());
 
+    // Distributor와 통신 처리
     var packet = {
         uri: "/distributes",
         method: "POST",
@@ -49,15 +55,16 @@ var server = http.createServer((req, res) => {
     this.clientDistributor = new tcpClient(
         "127.0.0.1"
         , 9000
-        , (options) => {
+        , (options) => { // 접속 이벤트
             isConnectedDistributor = true;
             this.clientDistributor.write(packet);
         }
-        , (options, data) => { onDistribute(data); }
-        , (options) => { isConnectedDistributor = false; }
-        , (options) => { isConnectedDistributor = false; }
+        , (options, data) => { onDistribute(data); } // 데이터 수신 이벤트
+        , (options) => { isConnectedDistributor = false; } // 접속 종료 이벤트
+        , (options) => { isConnectedDistributor = false; } // 에러 이벤트
     );
 
+    // 주기적인 Distributor 접속 상태 확인
     setInterval(() => {
         if (isConnectedDistributor != true) {
             this.clientDistributor.connect();
@@ -65,6 +72,7 @@ var server = http.createServer((req, res) => {
     }, 3000);
 });
 
+// API 호출 처리
 function onRequest(res, method, pathname, params) {
     var key = method + pathname;
     var client = mapUrls[key];
@@ -73,7 +81,7 @@ function onRequest(res, method, pathname, params) {
         res.end();
         return;
     } else {
-        params.key = index;
+        params.key = index; // API 호출에 대한 고유키 값 설정
         var packet = {
             uri: pathname,
             method: method,
@@ -82,13 +90,14 @@ function onRequest(res, method, pathname, params) {
 
         mapResponse[index] = res;
         index++;
-        if (mapRR[key] == null) 
+        if (mapRR[key] == null) // 라운드 로빈 처리
             mapRR[key] = 0;
         mapRR[key]++;
         client[mapRR[key] % client.length].write(packet);
     }
 }
 
+// Distributor 접속 처리
 function onDistribute(data) {
     for (var n in data.params) {
         var node = data.params[n];
@@ -111,17 +120,20 @@ function onDistribute(data) {
     }
 }
 
+// 마이크로서비스 접속 이벤트 처리
 function onCreateClient(options) {
     console.log("onCreateClient");
 }
 
+// 마이크로서비스 응답 처리
 function onReadClient(options, packet) {
     console.log("onReadClient", packet);
     mapResponse[packet.key].writeHead(200, { 'Content-Type': 'application/json' });
     mapResponse[packet.key].end(JSON.stringify(packet));
-    delete mapResponse[packet.key];
+    delete mapResponse[packet.key]; // http 응답 객체 삭제
 }
 
+// 마이크로서비스 접속 종료 처리
 function onEndClient(options) {
     var key = options.host + ":" + options.port;
     console.log("onEndClient", mapClients[key]);
@@ -132,6 +144,7 @@ function onEndClient(options) {
     delete mapClients[key];
 }
 
+// 마이크로 서비스 접속 에러 처리
 function onErrorClient(options) {
     console.log("onErrorClient");
 }
