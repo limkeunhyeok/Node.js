@@ -2,6 +2,7 @@
 
 // 비즈니스 로직 파일 참조
 const business = require('../모놀리식 서비스/monolithic_purchases');
+const cluster = require('cluster');
 
 // Server 클래스 참조
 class purchases extends require('./server') {
@@ -25,4 +26,13 @@ class purchases extends require('./server') {
     }
 }
 
-new purchases(); // 인스턴스 생성
+if (cluster.isMaster) {
+    cluster.fork();
+
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`worker ${worker.process.pid} died`);
+        cluster.fork();
+    });
+} else {
+    new purchases(); // 인스턴스 생성
+}
