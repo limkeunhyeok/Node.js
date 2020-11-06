@@ -1,10 +1,18 @@
 const mysql = require('mysql');
+const config = require('./config.json')
 const conn = {
-    host: 'localhost',
-    user: 'micro',
-    password: 'service',
-    database: 'monolithic'
+    host: config.host,
+    user: config.user,
+    password: config.password,
+    database: config.database,
+    multipleStatements: config.multipleStatements
 };
+
+const redis = require("redis").createClient();
+
+redis.on("error", function (err) {
+    console.log("Redis Error " + err);
+});
 
 /**
  * 상품 관리의 각 기능별로 분기
@@ -44,15 +52,18 @@ function register(method, pathname, params, cb) {
     } else {
         var connection = mysql.createConnection(conn);
         connection.connect();
-        connection.query("insert into goods(name, category, price, description) values(? ,? ,? ,?)"
+        connection.query("insert into goods(name, category, price, description) values(? ,? ,? ,?); select LAST_INSERT_ID() as id;"
             , [params.name, params.category, params.price, params.description]
             , (error, results, fields) => {
-            if (error) {
-                response.errorcode = 1;
-                response.errormessage = error;               
+                if (error) {
+                    response.errorcode = 1;
+                    response.errormessage = error;
+                } else {
+                    const id = results[1][0].id;
+                    redis.set(id, JSON.stringify(params)); // Redis 등록
                 }
-            cb(response);
-        });
+                cb(response);
+            });
         connection.end();
     }
 }
@@ -83,7 +94,7 @@ function inquiry(method, pathname, params, cb) {
         cb(response);
     });
     connection.end();
-    
+
 }
 
 /**
@@ -113,9 +124,11 @@ function unregister(method, pathname, params, cb) {
                 if (error) {
                     response.errorcode = 1;
                     response.errormessage = error;
+                } else {
+                    redis.del(params.id); // Redis 삭제
                 }
                 cb(response);
-        });
+            });
         connection.end();
     }
 }

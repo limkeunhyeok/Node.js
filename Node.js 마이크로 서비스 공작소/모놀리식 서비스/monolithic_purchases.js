@@ -1,10 +1,17 @@
 const mysql = require('mysql');
+const config = require('./config.json')
 const conn = {
-    host: 'localhost',
-    user: 'micro',
-    password: 'service',
-    database: 'monolithic'
+    host: config.host,
+    user: config.user,
+    password: config.password,
+    database: config.database,
 };
+
+const redis = require("redis").createClient(); // Redis 모듈 로드
+
+redis.on("error", function (err) {
+    console.log("Redis Error " + err);
+});
 
 /*
  * 구매 관리의 각 기능별로 분기
@@ -15,7 +22,7 @@ exports.onRequest = function (res, method, pathname, params, cb) {
         case "POST":
             return register(method, pathname, params, (response) => { process.nextTick(cb, res, response); });
         case "GET":
-            return inquiry(method, pathname, params, (response) => { process.nextTick(cb, res, response); });      
+            return inquiry(method, pathname, params, (response) => { process.nextTick(cb, res, response); });
         default:
             return process.nextTick(cb, res, null);
     }
@@ -40,18 +47,28 @@ function register(method, pathname, params, cb) {
         response.errormessage = "Invalid Parameters";
         cb(response);
     } else {
-        var connection = mysql.createConnection(conn);
-        connection.connect();
-        connection.query("insert into purchases(userid, goodsid) values(? ,? )"
-            , [params.userid, params.goodsid]
-            , (error, results, fields) => {
-                if (error) {
-                    response.errorcode = 1;
-                    response.errormessage = error;                    
-                } 
+        redis.get(params.goodsid, (err, result) => { // Redis에 상품정보 조회
+            if (err || result == null) {
+                response.errorcode = 1;
+                response.errormessage = "Redis failure";
                 cb(response);
-            });
-        connection.end();
+                return;
+            }
+
+            var connection = mysql.createConnection(conn);
+            connection.connect();
+            connection.query("insert into purchases(userid, goodsid) values(? ,? )"
+                , [params.userid, params.goodsid]
+                , (error, results, fields) => {
+                    if (error) {
+                        response.errorcode = 1;
+                        response.errormessage = error;
+                    }
+                    cb(response);
+                });
+            connection.end();
+        });
+        
     }
 }
 

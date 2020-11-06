@@ -1,11 +1,11 @@
 const mysql = require('mysql');
+const config = require('./config.json')
 const conn = {
-    host: 'localhost',
-    user: 'micro',
-    password: 'service',
-    database: 'monolithic'
+    host: config.host,
+    user: config.user,
+    password: config.password,
+    database: config.database,
 };
-
 /**
  *  회원 관리의 각 기능별로 분기
 */
