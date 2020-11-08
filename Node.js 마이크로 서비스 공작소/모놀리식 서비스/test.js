@@ -34,14 +34,12 @@ function request(cb, params) {
  * 상품 관리 API 테스트
  */
 
-function goods(callback) {    
+function goods(callback) {  
     goods_post(() => {
         goods_get(() => {
             goods_delete(callback);
         });
     });
-    
-    
 
     function goods_post(cb) {        
         options.method = "POST";
@@ -118,14 +116,14 @@ function purchases(callback) {
         options.method = "POST";
         options.path = "/purchases";        
         request(cb, {
-            userid: 1,
-            goodsid: 1
+            userId: 1,
+            goodsId: 1
         });
     }
 
     function purchases_get(cb) {
         options.method = "GET";
-        options.path = "/purchases?userid=1";        
+        options.path = "/purchases?userId=1";        
         request(cb);
     }
 }

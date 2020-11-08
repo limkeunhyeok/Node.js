@@ -122,7 +122,7 @@ function unregister(method, pathname, params, cb) {
             , [params.id]
             , (error, results, fields) => {
                 if (error) {
-                    response.errorcode = 1;
+                    response.errorcode = 1; 
                     response.errormessage = error;
                 } else {
                     redis.del(params.id); // Redis 삭제

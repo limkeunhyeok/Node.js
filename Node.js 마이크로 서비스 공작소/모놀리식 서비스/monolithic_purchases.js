@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const config = require('./config.json')
+const config = require('./config.json');
 const conn = {
     host: config.host,
     user: config.user,
@@ -42,23 +42,22 @@ function register(method, pathname, params, cb) {
         errormessage: "success"
     };
 
-    if (params.userid == null || params.goodsid == null) {
+    if (params.userId == null || params.goodsId == null) {
         response.errorcode = 1;
         response.errormessage = "Invalid Parameters";
         cb(response);
     } else {
-        redis.get(params.goodsid, (err, result) => { // Redis에 상품정보 조회
+        redis.get(params.goodsId, (err, result) => { // Redis에 상품정보 조회
             if (err || result == null) {
                 response.errorcode = 1;
                 response.errormessage = "Redis failure";
                 cb(response);
                 return;
             }
-
             var connection = mysql.createConnection(conn);
             connection.connect();
-            connection.query("insert into purchases(userid, goodsid) values(? ,? )"
-                , [params.userid, params.goodsid]
+            connection.query("insert into purchases(userId, goodsId) values(? ,? )"
+                , [params.userId, params.goodsId]
                 , (error, results, fields) => {
                     if (error) {
                         response.errorcode = 1;
@@ -86,15 +85,15 @@ function inquiry(method, pathname, params, cb) {
         errormessage: "success"
     };
 
-    if (params.userid == null) {
+    if (params.userId == null) {
         response.errorcode = 1;
         response.errormessage = "Invalid Parameters";
         cb(response);
     } else {
         var connection = mysql.createConnection(conn);
         connection.connect();
-        connection.query("select id, goodsid, date from purchases where userid = ?"
-            , [params.userid]
+        connection.query("select Id, goodsId, date from purchases where userId = ?"
+            , [params.userId]
             , (error, results, fields) => {
                 if (error) {
                     response.errorcode = 1;

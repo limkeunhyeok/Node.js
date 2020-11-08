@@ -22,7 +22,7 @@ class purchases extends require('./server') {
         console.log("onRead", socket.remoteAddress, socket.remotePort, data);
         business.onRequest(socket, data.method, data.uri, data.params, (s, packet) => {
             socket.write(JSON.stringify(packet) + '¶');
-        })
+        });
     }
 }
 
