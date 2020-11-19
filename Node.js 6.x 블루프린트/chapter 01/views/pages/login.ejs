@@ -2,10 +2,10 @@
 <html>
 <head>
     <title><%= title %></title>
-    <% include ../partials/stylesheet %>
+    <%- include ('../partials/stylesheet') %>
 </head>
 <body>
-    <% include ../partials/header %>
+    <%- include ('../partials/header') %>
 
     <div class="container">
         <% if (message.length > 0) { %>
@@ -28,7 +28,7 @@
         </form>
     </div>
 
-    <% include ../partials/footer %>
-    <% include ../partials/javascript %>
+    <%- include ('../partials/footer') %>
+    <%- include ('../partials/javascript') %>
 </body>
 </html>

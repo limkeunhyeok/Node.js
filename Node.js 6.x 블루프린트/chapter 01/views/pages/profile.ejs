@@ -2,10 +2,10 @@
 <html>
 <head>
     <title><%= title %></title>
-    <% include ../partials/stylesheet %>
+    <%- include ('../partials/stylesheet') %>
 </head>
 <body>
-    <% include ../partials/header %>
+    <%- include ('../partials/header') %>
 
     <div class="container">
         <h1><%= title %></h1>
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-        <% include ../partials/footer %>
-        <% include ../partials/javascript %>
+        <%- include ('../partials/footer') %>
+        <%- include ('../partials/javascript') %>
     </body>
     </html>
