@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
 const config = require('./config/config');
-mongoose.connect(config.url);
+mongoose.connect(config.url, {useNewUrlParser: true,  useUnifiedTopology: true});
 mongoose.connection.on('error', () => {
     console.error('MongoDB Connection Error. Make sure MongoDB is running.');
 });
