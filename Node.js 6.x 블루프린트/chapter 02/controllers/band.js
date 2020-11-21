@@ -8,11 +8,9 @@ exports.create = function(req, res) {
 };
 
 exports.list = function(req, res) {
-    console.log('???');
     models.Band.findAll({
         order: [['createdAt', 'DESC']]
     }).then((bands) => {
-        console.log('!!')
         res.render('band-list', {
             title: 'List bands',
             bands: bands
