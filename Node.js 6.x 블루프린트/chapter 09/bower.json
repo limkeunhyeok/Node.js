@@ -1,0 +1,31 @@
+{
+  "name": "chapter-09",
+  "description": "Node 6 blueprints book, chapter 09 example",
+  "main": "server/server.js",
+  "authors": [
+    "LKH <gorloom6425@naver.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Npm",
+    "building",
+    "process"
+  ],
+  "homepage": "https://github.com/limkeunhyeok/Node.js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha",
+    "fancybox": "^3.5.7",
+    "angular": "angularjs#1.5.0",
+    "angular-resource": "1.5.0",
+    "angular-ui-router": "^1.0.28"
+  }
+}
