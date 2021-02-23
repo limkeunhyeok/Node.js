@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../controller/index');
+const memberManagement = require('../controller/index');
+const validator = require('../controller/validator');
 
-router.post('/register', auth.register);
-router.get('/inquiry', auth.inquiry);
-router.delete('/unregister', auth.unregister);
+router.get('/list', memberManagement.list);
+router.post('/register', validator.email, validator.password, memberManagement.register);
+router.post('/inquiry', validator.email, memberManagement.inquiry);
+router.delete('/unregister', validator.email, memberManagement.unregister);
 
 module.exports = router;
