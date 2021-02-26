@@ -1,0 +1,19 @@
+[2021-02-26T13:37:37.537] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T13:54:58.133] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T14:04:51.963] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }

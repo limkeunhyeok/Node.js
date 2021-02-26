@@ -2,10 +2,42 @@ const express = require('express');
 const router = express.Router();
 const memberManagement = require('../controller/membersController');
 const validator = require('../controller/validator');
+const log = require('log4js').getLogger('members');
 
-router.get('/members', memberManagement.getMembersList);
-router.post('/register', validator.email, validator.password, memberManagement.register);
-router.post('/inquiry', validator.email, memberManagement.inquiry);
-router.delete('/unregister', validator.email, memberManagement.unregister);
+router.get('/members',
+    (req, res, next) => {
+        log.debug('getMemberList');
+        next();
+    },
+    memberManagement.getMembersList
+);
+
+router.post('/register',
+    (req, res, next) => {
+        log.debug('register');
+        next();
+    },
+    validator.email,
+    validator.password,
+    memberManagement.register
+);
+
+router.post('/inquiry',
+    (req, res, next) => {
+        log.debug('inquiry');
+        next();
+    },
+    validator.email,
+    memberManagement.inquiry
+);
+
+router.delete('/unregister',
+    (req, res, next) => {
+        log.debug('unregister');
+        next();
+    },
+    validator.email,
+    memberManagement.unregister
+);
 
 module.exports = router;

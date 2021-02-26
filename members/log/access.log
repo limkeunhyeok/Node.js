@@ -1,0 +1,7 @@
+[2021-02-26T13:37:02.699] [INFO] http - ::1 - - "POST /register HTTP/1.1" 200 61 "" "PostmanRuntime/7.26.10"
+[2021-02-26T13:37:37.541] [ERROR] http - ::1 - - "POST /register HTTP/1.1" 500 128 "" "PostmanRuntime/7.26.10"
+[2021-02-26T13:38:07.559] [INFO] http - ::1 - - "GET /members HTTP/1.1" 200 741 "" "PostmanRuntime/7.26.10"
+[2021-02-26T13:54:49.831] [INFO] http - ::1 - - "GET /members HTTP/1.1" 200 741 "" "PostmanRuntime/7.26.10"
+[2021-02-26T13:54:58.137] [ERROR] http - ::1 - - "POST /register HTTP/1.1" 500 128 "" "PostmanRuntime/7.26.10"
+[2021-02-26T13:55:05.492] [INFO] http - ::1 - - "POST /register HTTP/1.1" 200 61 "" "PostmanRuntime/7.26.10"
+[2021-02-26T14:04:51.965] [ERROR] http - ::1 - - "POST /r HTTP/1.1" 404 59 "" "PostmanRuntime/7.26.10"
