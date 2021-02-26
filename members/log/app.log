@@ -22,3 +22,107 @@
 }
 [2021-02-26T13:55:05.478] [DEBUG] members - register
 [2021-02-26T14:04:51.963] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-02-26T20:42:21.842] [DEBUG] members - getMembersList
+[2021-02-26T20:42:22.111] [DEBUG] members - register
+[2021-02-26T20:42:22.294] [DEBUG] members - inquiry
+[2021-02-26T20:42:22.341] [DEBUG] members - getMembersList
+[2021-02-26T20:42:22.402] [DEBUG] members - unregister
+[2021-02-26T20:42:22.407] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T20:42:22.468] [DEBUG] members - getMembersList
+[2021-02-26T20:46:16.460] [DEBUG] members - unregister
+[2021-02-26T20:46:27.564] [DEBUG] members - unregister
+[2021-02-26T20:47:31.022] [DEBUG] members - getMembersList
+[2021-02-26T20:47:31.051] [DEBUG] members - register
+[2021-02-26T20:47:31.085] [DEBUG] members - inquiry
+[2021-02-26T20:47:31.319] [DEBUG] members - getMembersList
+[2021-02-26T20:47:31.402] [DEBUG] members - unregister
+[2021-02-26T20:47:31.404] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T20:47:31.578] [DEBUG] members - getMembersList
+[2021-02-26T21:00:02.552] [DEBUG] members - getMembersList
+[2021-02-26T21:00:02.656] [DEBUG] members - register
+[2021-02-26T21:00:02.686] [DEBUG] members - inquiry
+[2021-02-26T21:00:02.720] [DEBUG] members - getMembersList
+[2021-02-26T21:00:02.754] [DEBUG] members - unregister
+[2021-02-26T21:00:02.755] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T21:00:02.803] [DEBUG] members - getMembersList
+[2021-02-26T21:01:38.120] [DEBUG] members - getMembersList
+[2021-02-26T21:01:38.143] [DEBUG] members - register
+[2021-02-26T21:01:38.197] [DEBUG] members - inquiry
+[2021-02-26T21:01:38.318] [DEBUG] members - getMembersList
+[2021-02-26T21:01:38.355] [DEBUG] members - unregister
+[2021-02-26T21:01:38.356] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-02-26T21:01:38.488] [DEBUG] members - getMembersList
+[2021-02-26T21:03:13.261] [DEBUG] members - getMembersList
+[2021-02-26T21:03:13.607] [DEBUG] members - register
+[2021-02-26T21:03:13.773] [DEBUG] members - inquiry
+[2021-02-26T21:03:13.874] [DEBUG] members - getMembersList
+[2021-02-26T21:03:14.038] [DEBUG] members - unregister
+[2021-02-26T21:03:14.096] [DEBUG] members - getMembersList
+[2021-02-26T21:04:58.282] [DEBUG] members - getMembersList
+[2021-02-26T21:04:58.344] [DEBUG] members - register
+[2021-02-26T21:04:58.405] [DEBUG] members - inquiry
+[2021-02-26T21:04:58.517] [DEBUG] members - getMembersList
+[2021-02-26T21:04:58.691] [DEBUG] members - unregister
+[2021-02-26T21:04:58.759] [DEBUG] members - getMembersList
+[2021-02-26T21:10:37.921] [DEBUG] members - getMembersList
+[2021-02-26T21:10:38.071] [DEBUG] members - register
+[2021-02-26T21:10:38.125] [DEBUG] members - inquiry
+[2021-02-26T21:10:38.161] [DEBUG] members - getMembersList
+[2021-02-26T21:10:38.268] [DEBUG] members - unregister
+[2021-02-26T21:10:38.397] [DEBUG] members - getMembersList
+[2021-02-26T21:11:13.220] [DEBUG] members - getMembersList
+[2021-02-26T21:11:13.371] [DEBUG] members - register
+[2021-02-26T21:11:13.437] [DEBUG] members - inquiry
+[2021-02-26T21:11:13.470] [DEBUG] members - getMembersList
+[2021-02-26T21:11:13.511] [DEBUG] members - unregister
+[2021-02-26T21:11:13.573] [DEBUG] members - getMembersList
+[2021-02-26T21:12:18.713] [DEBUG] members - getMembersList
+[2021-02-26T21:12:18.814] [DEBUG] members - register
+[2021-02-26T21:12:18.900] [DEBUG] members - inquiry
+[2021-02-26T21:12:18.958] [DEBUG] members - getMembersList
+[2021-02-26T21:12:19.011] [DEBUG] members - unregister
+[2021-02-26T21:12:19.067] [DEBUG] members - getMembersList
+[2021-02-26T21:13:34.783] [DEBUG] members - getMembersList
+[2021-02-26T21:13:34.830] [DEBUG] members - register
+[2021-02-26T21:13:34.876] [DEBUG] members - inquiry
+[2021-02-26T21:13:34.942] [DEBUG] members - getMembersList
+[2021-02-26T21:13:34.993] [DEBUG] members - unregister
+[2021-02-26T21:13:35.044] [DEBUG] members - getMembersList
+[2021-02-26T21:16:14.227] [DEBUG] members - getMembersList
+[2021-02-26T21:16:14.538] [DEBUG] members - register
+[2021-02-26T21:16:14.570] [DEBUG] members - inquiry
+[2021-02-26T21:16:14.743] [DEBUG] members - getMembersList
+[2021-02-26T21:16:15.034] [DEBUG] members - unregister
+[2021-02-26T21:16:15.102] [DEBUG] members - getMembersList

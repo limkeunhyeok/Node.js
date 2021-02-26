@@ -6,7 +6,7 @@ const log = require('log4js').getLogger('members');
 
 router.get('/members',
     (req, res, next) => {
-        log.debug('getMemberList');
+        log.debug('getMembersList');
         next();
     },
     memberManagement.getMembersList
@@ -31,7 +31,7 @@ router.post('/inquiry',
     memberManagement.inquiry
 );
 
-router.delete('/unregister',
+router.post('/unregister',
     (req, res, next) => {
         log.debug('unregister');
         next();
