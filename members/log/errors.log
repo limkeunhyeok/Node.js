@@ -1,2 +1,88 @@
 [2021-03-02T20:36:58.467] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
 [2021-03-02T20:38:18.048] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T16:13:51.018] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T16:13:51.284] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T16:14:39.914] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:12:17.670] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:52:24.752] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:53:32.226] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:54:12.870] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:07.055] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:29.606] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:31.991] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:14.696] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:17.307] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:51.502] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:59.026] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:58:03.312] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:15.421] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:47.255] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.258] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.494] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.717] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.910] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:53.507] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:01:45.326] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:03.700] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:08.770] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:16.291] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:22.065] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:03:01.388] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:03:25.797] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:10:39.284] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:10:59.000] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:12:31.025] [ERROR] app - SyntaxError: Unexpected token / in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\types\json.js:158:10)
+    at parse (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\types\json.js:83:15)
+    at C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:333:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  expose: true,
+  statusCode: 400,
+  status: 400,
+  body: '// {\n// \t"email": "lim@mail.com"\n// }',
+  type: 'entity.parse.failed'
+}
+[2021-03-03T18:13:43.837] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:28:45.158] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:29:05.691] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:43:48.178] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid password',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:44:38.047] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T20:18:57.175] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}

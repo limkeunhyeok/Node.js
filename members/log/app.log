@@ -6,3 +6,134 @@
 [2021-03-02T20:36:37.968] [DEBUG] members - getMembersList
 [2021-03-02T20:36:58.467] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
 [2021-03-02T20:38:18.048] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T15:54:52.108] [DEBUG] members - inquiry
+[2021-03-03T16:13:51.018] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T16:13:51.284] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T16:14:08.083] [DEBUG] members - getMembersList
+[2021-03-03T16:14:39.911] [DEBUG] members - inquiry
+[2021-03-03T16:14:39.914] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:12:17.670] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:12:31.039] [DEBUG] members - inquiry
+[2021-03-03T17:13:50.897] [DEBUG] members - inquiry
+[2021-03-03T17:15:44.939] [DEBUG] members - inquiry
+[2021-03-03T17:16:18.339] [DEBUG] members - inquiry
+[2021-03-03T17:16:22.775] [DEBUG] members - inquiry
+[2021-03-03T17:16:31.575] [DEBUG] members - inquiry
+[2021-03-03T17:17:04.388] [DEBUG] members - inquiry
+[2021-03-03T17:52:14.643] [DEBUG] members - getMembersList
+[2021-03-03T17:52:24.752] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:53:32.226] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:54:12.870] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:07.055] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:29.606] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:56:31.991] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:14.696] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:17.307] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:51.502] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:57:59.026] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:58:03.312] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:15.421] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:47.255] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.258] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.494] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.717] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:48.910] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T17:59:53.507] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:00:54.266] [DEBUG] members - getMembersList
+[2021-03-03T18:01:05.426] [DEBUG] members - getMembersList
+[2021-03-03T18:01:45.326] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:03.700] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:08.770] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:12.170] [DEBUG] members - getMembersList
+[2021-03-03T18:02:16.291] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:02:22.065] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:03:01.388] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:03:25.797] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:03:28.110] [DEBUG] members - getMembersList
+[2021-03-03T18:08:57.998] [DEBUG] members - getMembersList
+[2021-03-03T18:10:16.101] [DEBUG] members - getMembersList
+[2021-03-03T18:10:39.284] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:10:59.000] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:12:15.939] [DEBUG] members - getMembersList
+[2021-03-03T18:12:31.025] [ERROR] app - SyntaxError: Unexpected token / in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\types\json.js:158:10)
+    at parse (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\types\json.js:83:15)
+    at C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:333:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  expose: true,
+  statusCode: 400,
+  status: 400,
+  body: '// {\n// \t"email": "lim@mail.com"\n// }',
+  type: 'entity.parse.failed'
+}
+[2021-03-03T18:13:43.834] [DEBUG] members - getMembersList
+[2021-03-03T18:13:43.837] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:28:45.158] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:29:05.688] [DEBUG] members - getMembersList
+[2021-03-03T18:29:05.691] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:43:48.172] [DEBUG] members - getMembersList
+[2021-03-03T18:43:48.178] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid password',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T18:43:57.927] [DEBUG] members - getMembersList
+[2021-03-03T18:44:38.046] [DEBUG] members - getMembersList
+[2021-03-03T18:44:38.047] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-03T18:45:06.324] [DEBUG] members - getMembersList
+[2021-03-03T20:16:48.217] [DEBUG] members - getMembersList
+[2021-03-03T20:18:56.962] [DEBUG] members - getMembersList
+[2021-03-03T20:18:57.175] [ERROR] app - Response {
+  code: 0,
+  message: 'Invalid email',
+  value: Result {
+    formatter: [Function: formatter],
+    errors: [ [Object] ],
+    status: 400
+  }
+}
+[2021-03-03T20:26:28.778] [DEBUG] members - getMembersList
+[2021-03-03T20:26:44.098] [DEBUG] members - getMembersList
+[2021-03-03T20:26:47.574] [DEBUG] members - getMembersList
+[2021-03-03T20:27:21.304] [DEBUG] members - getMembersList
+[2021-03-03T20:27:29.798] [DEBUG] members - getMembersList
+[2021-03-03T20:27:35.851] [DEBUG] members - getMembersList
+[2021-03-03T20:32:22.732] [DEBUG] members - getMembersList
+[2021-03-03T20:32:56.893] [DEBUG] members - getMembersList
+[2021-03-03T20:33:10.563] [DEBUG] members - getMembersList
+[2021-03-03T20:46:22.811] [DEBUG] members - getMembersList
+[2021-03-03T20:48:54.204] [DEBUG] members - getMembersList
+[2021-03-03T20:49:03.458] [DEBUG] members - getMembersList
+[2021-03-03T20:50:14.963] [DEBUG] members - getMembersList
+[2021-03-03T21:13:17.868] [DEBUG] members - getMembersList
+[2021-03-03T21:13:23.587] [DEBUG] members - getMembersList
+[2021-03-03T21:13:31.984] [DEBUG] members - getMembersList
+[2021-03-03T21:31:28.946] [DEBUG] members - getMembersList
+[2021-03-03T21:31:29.325] [DEBUG] members - getMembersList
+[2021-03-03T21:31:29.360] [DEBUG] members - getMembersList

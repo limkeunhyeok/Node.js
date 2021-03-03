@@ -1,4 +1,5 @@
 // 참고 사이트 https://js.plainenglish.io/getting-started-with-express-validator-fae0bbeeb0f9
+
 const Response = require('../response/response');
 const RESPONSE_CODE = require('../response/responseCode');
 const {check, validationResult} = require('express-validator');
@@ -10,7 +11,10 @@ exports.email = [
         .normalizeEmail(),
     function(req, res, next) {
         const err = validationResult(req);
-        if (!err.isEmpty()) {
+        if (req.method === 'GET' && !err.isEmpty()) {
+            console.log('View all members!');
+            next();
+        } else if (!err.isEmpty()) {
             err.status = 400;
             next(new Response(RESPONSE_CODE.SUCCESS, 'Invalid email', err));
         } else {

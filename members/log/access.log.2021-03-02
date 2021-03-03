@@ -1,0 +1,8 @@
+[2021-03-02T20:36:36.981] [INFO] http - ::ffff:127.0.0.1 - - "GET /members HTTP/1.1" 200 741 "" "undefined"
+[2021-03-02T20:36:37.459] [INFO] http - ::ffff:127.0.0.1 - - "POST /register HTTP/1.1" 200 58 "" "undefined"
+[2021-03-02T20:36:37.549] [INFO] http - ::ffff:127.0.0.1 - - "POST /inquiry HTTP/1.1" 200 128 "" "undefined"
+[2021-03-02T20:36:37.706] [INFO] http - ::ffff:127.0.0.1 - - "GET /members HTTP/1.1" 200 810 "" "undefined"
+[2021-03-02T20:36:37.950] [INFO] http - ::ffff:127.0.0.1 - - "POST /unregister HTTP/1.1" 200 60 "" "undefined"
+[2021-03-02T20:36:37.972] [INFO] http - ::ffff:127.0.0.1 - - "GET /members HTTP/1.1" 200 741 "" "undefined"
+[2021-03-02T20:36:58.470] [ERROR] http - ::1 - - "GET / HTTP/1.1" 404 59 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+[2021-03-02T20:38:18.061] [ERROR] http - ::1 - - "GET / HTTP/1.1" 404 59 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"

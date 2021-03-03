@@ -6,21 +6,26 @@ const query = require('../utils/query');
 async function getEmailInfo(req, res, next) {
     let { email } = req.body;
     try {
-        let rows = await pool.query(query.getEmailInfo, [email]);
+        let lows;
+        if (email === '@') {
+            rows = await pool.query(query.getMembersList);
+        } else {
+            rows = await pool.query(query.getEmailInfo, [email]);
+        }
         return rows[0]
     } catch (err) {
         next(new Response(RESPONSE_CODE.FAIL, 'DB Error!', err));
     }
 }
 
-exports.getMembersList = async function(req, res, next) {
-    try {
-        let rows = await pool.query(query.getMembersList);
-        return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'Search successfully!', rows[0]));
-    } catch (err) {
-        next(new Response(RESPONSE_CODE.FAIL, 'DB Error!', err));
-    }
-}
+// exports.getMembersList = async function(req, res, next) {
+//     try {
+//         let rows = await pool.query(query.getMembersList);
+//         return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'Search successfully!', rows[0]));
+//     } catch (err) {
+//         next(new Response(RESPONSE_CODE.FAIL, 'DB Error!', err));
+//     }
+// }
 
 exports.register = async function(req, res, next) {
     let { email, password, nick } = req.body;
@@ -39,8 +44,11 @@ exports.register = async function(req, res, next) {
 
 exports.inquiry = async function(req, res, next) {
     try {
+        let { email } = req.body;
         let rows = await getEmailInfo(req, res, next);
-        if (rows.length) {
+        if (email === '@') {
+            return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'Search successfully!', rows));
+        } else if (rows.length) {
             return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'Inquiry sent successfully!', rows));
         }
         return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'Unregistered email', null))

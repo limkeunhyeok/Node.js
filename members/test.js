@@ -30,18 +30,17 @@ function request(params, callback) {
     req.end();
 }
 
+// Postman으로 get 또는 delete 메서드로 요청을 보낼 때,
+// req.body에 json 데이터를 함께 보내는 것이 가능하나
+// 여기선 왜인지 안됨. 이유는 모름
 function members(callback) {
     getMembersList(() => {
         register(() => {
             inquiry(() => {
-                getMembersList(() => {
-                    unregister(() => {
-                        getMembersList(callback);
-                    });
-                });
-            });
-        });
-    });
+                unregister(callback);
+            })
+        })
+    })
 
     function getMembersList(cb) {
         opts.method = 'GET';
@@ -52,7 +51,7 @@ function members(callback) {
 
     function register(cb) {
         opts.method = 'POST';
-        opts.path = '/register';
+        opts.path = '/members';
         request({
             email: 'LKH@mail.com',
             password: 'asd123456',
@@ -62,8 +61,8 @@ function members(callback) {
     }
 
     function inquiry(cb) {
-        opts.method = 'POST';
-        opts.path = '/inquiry';
+        opts.method = 'GET';
+        opts.path = '/members';
         request({
             email: 'LKH@mail.com'
         }, cb);
@@ -71,8 +70,8 @@ function members(callback) {
     }
 
     function unregister(cb) {
-        opts.method = 'POST';
-        opts.path = '/unregister';
+        opts.method = 'DELETE';
+        opts.path = '/members';
         request({
             email: 'LKH@mail.com'
         }, cb);
