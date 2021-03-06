@@ -86,3 +86,5 @@
     status: 400
   }
 }
+[2021-03-05T15:44:43.577] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-05T15:48:33.123] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
