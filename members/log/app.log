@@ -168,3 +168,400 @@
 [2021-03-05T17:24:58.109] [DEBUG] members - getMembersList
 [2021-03-05T17:26:42.530] [DEBUG] members - getMembersList
 [2021-03-05T17:31:02.008] [DEBUG] members - getMembersList
+[2021-03-09T16:31:31.168] [DEBUG] members - getMembersList
+[2021-03-09T16:31:31.367] [DEBUG] members - getMembersList
+[2021-03-09T16:31:31.395] [DEBUG] members - getMembersList
+[2021-03-16T14:10:26.179] [INFO] app - Example app listening on port 3000!
+[2021-03-16T14:40:16.031] [INFO] app - Example app listening on port 3000!
+[2021-03-16T14:40:25.930] [DEBUG] members - getMembersList
+[2021-03-16T14:40:27.986] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:16:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:40:28.137] [DEBUG] members - getMembersList
+[2021-03-16T14:40:30.154] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:13:25)
+      at exports.register (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:24:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.password (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:38:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:40:30.164] [DEBUG] members - getMembersList
+[2021-03-16T14:40:32.176] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:16:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:41:25.474] [DEBUG] members - getMembersList
+[2021-03-16T14:41:25.687] [DEBUG] members - getMembersList
+[2021-03-16T14:41:25.712] [DEBUG] members - getMembersList
+[2021-03-16T14:44:16.189] [DEBUG] members - getMembersList
+[2021-03-16T14:45:04.705] [DEBUG] members - getMembersList
+[2021-03-16T14:45:24.362] [DEBUG] members - getMembersList
+[2021-03-16T14:45:26.375] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:13:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:22:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:29:50.277] [INFO] app - Example app listening on port 3000!
+[2021-03-16T15:57:25.378] [DEBUG] members - getMembersList
+[2021-03-16T15:57:25.388] [DEBUG] validator - View all members!
+[2021-03-16T15:57:27.437] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:58:06.229] [DEBUG] members - getMembersList
+[2021-03-16T15:58:06.230] [DEBUG] validator - View all members!
+[2021-03-16T15:58:08.234] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:58:20.584] [DEBUG] members - getMembersList
+[2021-03-16T15:58:20.586] [DEBUG] validator - View all members!
+[2021-03-16T15:58:22.589] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:59:08.641] [DEBUG] members - getMembersList
+[2021-03-16T15:59:08.642] [DEBUG] validator - View all members!
+[2021-03-16T15:59:10.646] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:59:17.506] [DEBUG] members - getMembersList
+[2021-03-16T15:59:17.508] [DEBUG] validator - View all members!
+[2021-03-16T15:59:19.512] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:59:53.864] [DEBUG] members - getMembersList
+[2021-03-16T15:59:53.865] [DEBUG] validator - View all members!
+[2021-03-16T16:02:56.380] [DEBUG] members - getMembersList
+[2021-03-16T16:02:56.385] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:02:56.387] [DEBUG] members - getMembersList
+[2021-03-16T16:02:56.388] [DEBUG] validator - View all members!
+[2021-03-16T16:04:13.804] [DEBUG] members - getMembersList
+[2021-03-16T16:04:13.805] [DEBUG] validator - View all members!
+[2021-03-16T16:04:13.806] [DEBUG] members - getMembersList
+[2021-03-16T16:04:13.807] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:09:01.383] [DEBUG] members - getMembersList
+[2021-03-16T16:09:01.384] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:09:01.387] [DEBUG] members - getMembersList
+[2021-03-16T16:09:01.388] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:09:01.390] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:09:01.392] [DEBUG] members - getMembersList
+[2021-03-16T16:09:01.393] [DEBUG] validator - View all members!
+[2021-03-16T16:09:01.395] [DEBUG] members - getMembersList
+[2021-03-16T16:09:01.396] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:28:17.637] [DEBUG] members - getMembersList
+[2021-03-16T16:28:17.638] [DEBUG] validator - View all members!
+[2021-03-16T16:30:52.540] [DEBUG] members - getMembersList
+[2021-03-16T16:30:52.541] [DEBUG] validator - View all members!
+[2021-03-16T16:30:52.543] [DEBUG] members - getMembersList
+[2021-03-16T16:30:52.543] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:30:52.543] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:32:24.949] [DEBUG] members - getMembersList
+[2021-03-16T16:32:24.950] [DEBUG] validator - View all members!
+[2021-03-16T16:32:24.951] [DEBUG] members - getMembersList
+[2021-03-16T16:32:24.951] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:32:24.952] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:32:33.136] [DEBUG] members - getMembersList
+[2021-03-16T16:32:33.137] [DEBUG] validator - View all members!
+[2021-03-16T16:32:33.138] [DEBUG] members - getMembersList
+[2021-03-16T16:32:33.138] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:32:33.138] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:35:22.335] [DEBUG] members - getMembersList
+[2021-03-16T16:35:22.336] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:35:22.336] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:35:22.337] [DEBUG] members - getMembersList
+[2021-03-16T16:35:22.337] [DEBUG] validator - View all members!
+[2021-03-16T16:36:08.843] [DEBUG] members - getMembersList
+[2021-03-16T16:36:08.844] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:36:08.844] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:36:08.846] [DEBUG] members - getMembersList
+[2021-03-16T16:36:08.847] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:36:32.514] [DEBUG] members - getMembersList
+[2021-03-16T16:36:32.515] [DEBUG] validator - View all members!
+[2021-03-16T16:36:32.516] [DEBUG] members - getMembersList
+[2021-03-16T16:36:32.517] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:36:32.517] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:37:13.972] [DEBUG] members - getMembersList
+[2021-03-16T16:37:13.972] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:37:13.973] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:37:13.974] [DEBUG] members - getMembersList
+[2021-03-16T16:37:13.974] [DEBUG] validator - View all members!
+[2021-03-16T16:37:26.763] [DEBUG] members - getMembersList
+[2021-03-16T16:37:26.764] [DEBUG] validator - View all members!
+[2021-03-16T16:37:26.766] [DEBUG] members - getMembersList
+[2021-03-16T16:37:26.768] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:37:26.769] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:37:48.776] [DEBUG] members - getMembersList
+[2021-03-16T16:37:48.777] [DEBUG] validator - View all members!
+[2021-03-16T16:37:48.779] [DEBUG] members - getMembersList
+[2021-03-16T16:37:48.780] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:37:48.780] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:40:28.433] [DEBUG] members - getMembersList
+[2021-03-16T16:40:28.434] [DEBUG] validator - View all members!
+[2021-03-16T16:40:28.477] [DEBUG] members - getMembersList
+[2021-03-16T16:40:28.478] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:40:28.479] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:42:01.041] [DEBUG] members - getMembersList
+[2021-03-16T16:42:01.042] [DEBUG] validator - View all members!
+[2021-03-16T16:42:01.084] [DEBUG] members - getMembersList
+[2021-03-16T16:42:01.085] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:42:01.089] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:42:01.100] [DEBUG] members - getMembersList
+[2021-03-16T16:42:01.101] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:43:02.077] [DEBUG] members - getMembersList
+[2021-03-16T16:43:02.077] [DEBUG] validator - View all members!
+[2021-03-16T16:43:02.122] [DEBUG] members - getMembersList
+[2021-03-16T16:43:02.123] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:43:02.124] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:43:02.136] [DEBUG] members - getMembersList
+[2021-03-16T16:43:02.138] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:43:02.150] [DEBUG] members - getMembersList
+[2021-03-16T16:43:02.151] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:46:11.925] [INFO] app - Example app listening on port 3000!
+[2021-03-16T16:46:24.649] [DEBUG] members - getMembersList
+[2021-03-16T16:46:24.657] [DEBUG] validator - View all members!
+[2021-03-16T16:46:24.825] [DEBUG] members - getMembersList
+[2021-03-16T16:46:24.833] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:46:24.834] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:46:24.855] [DEBUG] members - getMembersList
+[2021-03-16T16:46:24.857] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:46:24.869] [DEBUG] members - getMembersList
+[2021-03-16T16:46:24.870] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:49:21.193] [INFO] app - Example app listening on port 3000!
+[2021-03-16T16:49:44.306] [DEBUG] members - getMembersList
+[2021-03-16T16:49:44.314] [DEBUG] validator - View all members!
+[2021-03-16T16:49:44.506] [DEBUG] members - getMembersList
+[2021-03-16T16:49:44.515] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:49:44.518] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:49:44.538] [DEBUG] members - getMembersList
+[2021-03-16T16:49:44.539] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:49:44.559] [DEBUG] members - getMembersList
+[2021-03-16T16:49:44.561] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:52:22.907] [INFO] app - Example app listening on port 3000!
+[2021-03-16T16:53:10.560] [INFO] app - Example app listening on port 3000!
+[2021-03-16T16:53:14.372] [DEBUG] members - getMembersList
+[2021-03-16T16:53:14.380] [DEBUG] validator - View all members!
+[2021-03-16T16:53:14.538] [DEBUG] members - getMembersList
+[2021-03-16T16:53:14.544] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:53:14.546] [DEBUG] validator - Password validation complete!
+[2021-03-16T16:53:14.567] [DEBUG] members - getMembersList
+[2021-03-16T16:53:14.568] [DEBUG] validator - Email validation complete!
+[2021-03-16T16:53:14.578] [DEBUG] members - getMembersList
+[2021-03-16T16:53:14.579] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:06:25.198] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:06:39.674] [DEBUG] members - getMembersList
+[2021-03-16T18:06:39.683] [DEBUG] validator - View all members!
+[2021-03-16T18:06:41.729] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:41.991] [DEBUG] members - getMembersList
+[2021-03-16T18:06:41.999] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:06:42.001] [DEBUG] validator - Password validation complete!
+[2021-03-16T18:06:44.007] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:44.119] [DEBUG] members - getMembersList
+[2021-03-16T18:06:44.121] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:06:46.125] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:46.243] [DEBUG] members - getMembersList
+[2021-03-16T18:06:46.244] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:06:48.257] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:11:15.681] [DEBUG] members - getMembersList
+[2021-03-16T18:11:15.682] [DEBUG] validator - View all members!
+[2021-03-16T18:11:15.856] [DEBUG] members - getMembersList
+[2021-03-16T18:11:15.860] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:11:15.861] [DEBUG] validator - Password validation complete!
+[2021-03-16T18:11:15.893] [DEBUG] members - getMembersList
+[2021-03-16T18:11:15.895] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:11:15.909] [DEBUG] members - getMembersList
+[2021-03-16T18:11:15.910] [DEBUG] validator - Email validation complete!
+[2021-03-16T18:12:45.050] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:13:25.111] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:17:50.049] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:17:50.215] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:17:50.352] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:17:50.424] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:18:35.697] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:18:35.697] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:18:35.744] [INFO] app - Example app listening on port 3000!
+[2021-03-16T18:18:35.792] [INFO] app - Example app listening on port 3000!

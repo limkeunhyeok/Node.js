@@ -11,7 +11,6 @@ exports.email = [
         const err = validationResult(req);
         if (!err.isEmpty()) {
             err.status = 400;
-            console.log(err);
             next(new Response(RESPONSE_CODE.SUCCESS, 'Invalid email', err));
         } else {
             console.log('Email validation complete!');

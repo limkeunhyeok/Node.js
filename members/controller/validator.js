@@ -1,41 +1,39 @@
 // 참고 사이트 https://js.plainenglish.io/getting-started-with-express-validator-fae0bbeeb0f9
 
-const Response = require('../response/response');
-const RESPONSE_CODE = require('../response/responseCode');
-const {check, validationResult} = require('express-validator');
+const { check, validationResult } = require("express-validator");
+const log = require("log4js").getLogger("validator");
+const Response = require("../response/response");
+const RESPONSE_CODE = require("../response/responseCode");
 
 exports.email = [
-    check('email')
-        .isEmail()
-        .withMessage('Invalid email')
-        .normalizeEmail(),
-    function(req, res, next) {
-        const err = validationResult(req);
-        if (req.method === 'GET' && !err.isEmpty()) {
-            console.log('View all members!');
-            next();
-        } else if (!err.isEmpty()) {
-            err.status = 400;
-            next(new Response(RESPONSE_CODE.SUCCESS, 'Invalid email', err));
-        } else {
-            console.log('Email validation complete!');
-            next();
-        }
+  check("email").isEmail().withMessage("Invalid email").normalizeEmail(),
+  function (req, res, next) {
+    const err = validationResult(req);
+    if (req.method === "GET" && !err.isEmpty()) {
+      log.debug("View all members!");
+      next();
+    } else if (!err.isEmpty()) {
+      err.status = 400;
+      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid email", err));
+    } else {
+      log.debug("Email validation complete!");
+      next();
     }
-]
+  },
+];
 
 exports.password = [
-    check('password')
-        .isLength({ min: 8, max: 15 })
-        .withMessage("your password should have min and max length between 8-15"),
-    function(req, res, next) {
-        const err = validationResult(req);
-        if (!err.isEmpty()) {
-            err.status = 400;
-            next(new Response(RESPONSE_CODE.SUCCESS, 'Invalid password', err));
-        } else {
-            console.log('Password validation complete!')
-            next()
-        }
+  check("password")
+    .isLength({ min: 8, max: 15 })
+    .withMessage("your password should have min and max length between 8-15"),
+  function (req, res, next) {
+    const err = validationResult(req);
+    if (!err.isEmpty()) {
+      err.status = 400;
+      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid password", err));
+    } else {
+      log.debug("Password validation complete!");
+      next();
     }
-]
+  },
+];

@@ -1,3 +1,4 @@
+// 참고 https://im-developer.tistory.com/167
 const Response = require('../response/response');
 const RESPONSE_CODE = require('../response/responseCode');
 const axios = require('axios');

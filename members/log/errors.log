@@ -88,3 +88,228 @@
 }
 [2021-03-05T15:44:43.577] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
 [2021-03-05T15:48:33.123] [ERROR] app - Response { code: 0, message: 'Not Found!', value: null, status: 404 }
+[2021-03-16T14:40:27.986] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:16:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:40:30.154] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:13:25)
+      at exports.register (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:24:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.password (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:38:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:40:32.176] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:16:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T14:45:26.375] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:13:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:22:13)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:57:27.437] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:58:08.234] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:58:22.589] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:59:10.646] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T15:59:19.512] [ERROR] app - Response {
+  code: 1,
+  message: 'DB Error!',
+  value: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at PromisePool.query (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\mysql2\promise.js:340:22)
+      at getEmailInfo (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:11:25)
+      at exports.inquiry (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\membersController.js:46:24)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at exports.email (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\controller\validator.js:14:7)
+      at Layer.handle [as handle_request] (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\세컨드\Desktop\study\Node.JS\새 폴더\Node.js\members\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED',
+    sqlState: undefined,
+    sqlMessage: undefined
+  }
+}
+[2021-03-16T18:06:41.729] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:44.007] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:46.125] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
+[2021-03-16T18:06:48.257] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: 'connect ECONNREFUSED 127.0.0.1:3306',
+    code: 'ECONNREFUSED',
+    errno: 'ECONNREFUSED'
+  }
+}
