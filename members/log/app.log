@@ -565,3 +565,225 @@
 [2021-03-16T18:18:35.697] [INFO] app - Example app listening on port 3000!
 [2021-03-16T18:18:35.744] [INFO] app - Example app listening on port 3000!
 [2021-03-16T18:18:35.792] [INFO] app - Example app listening on port 3000!
+[2021-03-19T19:00:52.019] [INFO] app - Example app listening on port 3000!
+[2021-03-19T19:01:23.917] [DEBUG] members - getMembersList
+[2021-03-19T19:01:23.922] [DEBUG] validator - View all members!
+[2021-03-19T19:01:23.947] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:23.971] [DEBUG] members - getMembersList
+[2021-03-19T19:01:23.974] [DEBUG] validator - Email validation complete!
+[2021-03-19T19:01:23.975] [DEBUG] validator - Password validation complete!
+[2021-03-19T19:01:23.979] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:23.987] [DEBUG] members - getMembersList
+[2021-03-19T19:01:23.990] [DEBUG] validator - Email validation complete!
+[2021-03-19T19:01:23.994] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:23.999] [DEBUG] members - getMembersList
+[2021-03-19T19:01:23.999] [DEBUG] validator - Email validation complete!
+[2021-03-19T19:01:24.004] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-22T17:05:27.897] [INFO] app - Example app listening on port 3000!
+[2021-03-22T17:05:37.334] [DEBUG] members - getMembersList
+[2021-03-22T17:05:37.338] [DEBUG] validator - View all members!
+[2021-03-22T17:05:37.371] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.397] [DEBUG] members - getMembersList
+[2021-03-22T17:05:37.401] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:05:37.402] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:05:37.404] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.411] [DEBUG] members - getMembersList
+[2021-03-22T17:05:37.415] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:05:37.417] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.423] [DEBUG] members - getMembersList
+[2021-03-22T17:05:37.424] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:05:37.426] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.896] [DEBUG] members - getMembersList
+[2021-03-22T17:06:42.897] [DEBUG] validator - View all members!
+[2021-03-22T17:06:42.899] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.916] [DEBUG] members - getMembersList
+[2021-03-22T17:06:42.916] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:06:42.917] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:06:42.919] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.924] [DEBUG] members - getMembersList
+[2021-03-22T17:06:42.925] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:06:42.927] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.932] [DEBUG] members - getMembersList
+[2021-03-22T17:06:42.933] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:06:42.935] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:10:37.974] [INFO] app - Example app listening on port 3000!
+[2021-03-22T17:10:39.719] [DEBUG] members - getMembersList
+[2021-03-22T17:10:39.724] [DEBUG] validator - View all members!
+[2021-03-22T17:10:39.771] [DEBUG] members - getMembersList
+[2021-03-22T17:10:39.775] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:10:39.776] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:10:39.782] [DEBUG] members - getMembersList
+[2021-03-22T17:10:39.785] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:10:39.788] [DEBUG] members - getMembersList
+[2021-03-22T17:10:39.789] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:11:58.720] [DEBUG] members - getMembersList
+[2021-03-22T17:11:58.721] [DEBUG] validator - View all members!
+[2021-03-22T17:11:58.732] [DEBUG] members - getMembersList
+[2021-03-22T17:11:58.736] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:11:58.736] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:11:58.742] [DEBUG] members - getMembersList
+[2021-03-22T17:11:58.743] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:12:24.097] [DEBUG] members - getMembersList
+[2021-03-22T17:12:24.097] [DEBUG] validator - View all members!
+[2021-03-22T17:12:24.109] [DEBUG] members - getMembersList
+[2021-03-22T17:12:24.109] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:12:24.109] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:12:24.113] [DEBUG] members - getMembersList
+[2021-03-22T17:12:24.114] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:12:24.117] [DEBUG] members - getMembersList
+[2021-03-22T17:12:24.118] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:13:46.855] [DEBUG] members - getMembersList
+[2021-03-22T17:13:46.855] [DEBUG] validator - View all members!
+[2021-03-22T17:14:34.554] [DEBUG] members - getMembersList
+[2021-03-22T17:14:34.555] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:14:34.555] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:14:45.308] [DEBUG] members - getMembersList
+[2021-03-22T17:14:45.309] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:14:45.309] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:15:00.642] [DEBUG] members - getMembersList
+[2021-03-22T17:15:00.643] [ERROR] app - {
+  code: 0,
+  message: 'Invalid email',
+  value: { errors: [ [Object] ], status: 400 }
+}
+[2021-03-22T17:15:07.875] [DEBUG] members - getMembersList
+[2021-03-22T17:15:07.876] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:15:07.876] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:15:20.612] [DEBUG] members - getMembersList
+[2021-03-22T17:15:20.612] [DEBUG] validator - Email validation complete!
+[2021-03-22T17:15:20.612] [DEBUG] validator - Password validation complete!
+[2021-03-22T17:15:29.838] [DEBUG] members - getMembersList
+[2021-03-22T17:15:29.838] [DEBUG] validator - View all members!
+[2021-03-22T17:18:50.487] [DEBUG] members - getMembersList
+[2021-03-22T17:18:50.487] [DEBUG] validator - Email validation complete!
+[2021-03-23T14:09:47.672] [INFO] app - Example app listening on port 3000!
+[2021-03-23T14:10:51.159] [DEBUG] members - getMembersList
+[2021-03-23T14:10:51.167] [DEBUG] validator - Email validation complete!
+[2021-03-23T14:11:56.064] [DEBUG] members - getMembersList
+[2021-03-23T14:11:56.067] [DEBUG] validator - Email validation complete!
+[2021-03-23T14:12:25.350] [DEBUG] members - getMembersList
+[2021-03-23T14:12:25.352] [DEBUG] validator - Email validation complete!
+[2021-03-23T14:15:31.851] [DEBUG] members - getMembersList
+[2021-03-23T14:15:31.851] [DEBUG] validator - Email validation complete!
+[2021-03-23T14:18:46.276] [DEBUG] members - getMembersList
+[2021-03-23T14:18:46.277] [DEBUG] validator - Email validation complete!

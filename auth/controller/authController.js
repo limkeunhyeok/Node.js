@@ -25,6 +25,8 @@ exports.login = async function(req, res, next) {
             id: data.value[0].id
         }, 'keyboard cat');
         res.cookie('user', token);
+        console.log('?????');
+        console.log(res.session);
         return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'success', data));
     } catch (err) {
         next(new Response(RESPONSE_CODE.FAIL, 'fail', err));

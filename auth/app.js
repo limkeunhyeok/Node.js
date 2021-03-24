@@ -1,16 +1,29 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
+const fs = require('fs');
+const compression = require('compression');
 const app = express();
 const Response = require('./response/response');
 const RESPONSE_CODE = require('./response/responseCode');
-const auth = require('./routes/index');
+const indexRouter = require('./routes/index');
+const topicRouter = require('./routes/topic');
 
 app.use(helmet());
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(compression());
 
-app.use('/', auth);
+app.get('*', (req, res, next) => {
+    fs.readdir('./data', (err, files) => {
+        req.list = files;
+        next();
+    });
+});
+
+app.use('/', indexRouter);
+app.use('/topic', topicRouter);
 
 app.use((req, res, next) => {
     let err = new Response(RESPONSE_CODE.SUCCESS, 'Not Found!', null);

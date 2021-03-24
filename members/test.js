@@ -6,8 +6,8 @@ const opts = {
 
 function test(option) {
   return new Promise((resolve, reject) => {
-    axios(option)
-      .then((result) => {
+    .then((result) => {
+        axios(option)
         resolve(result);
       })
       .catch((err) => {

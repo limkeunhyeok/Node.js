@@ -313,3 +313,140 @@
     errno: 'ECONNREFUSED'
   }
 }
+[2021-03-19T19:01:23.947] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:23.979] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:23.994] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-19T19:01:24.004] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: YES)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: YES)"
+  }
+}
+[2021-03-22T17:05:37.371] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.404] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.417] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:05:37.426] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.899] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.919] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.927] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:06:42.935] [ERROR] app - {
+  code: 1,
+  message: 'DB Error!',
+  value: {
+    message: "Access denied for user ''@'localhost' (using password: NO)",
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+  }
+}
+[2021-03-22T17:15:00.643] [ERROR] app - {
+  code: 0,
+  message: 'Invalid email',
+  value: { errors: [ [Object] ], status: 400 }
+}
