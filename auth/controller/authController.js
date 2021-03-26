@@ -2,9 +2,35 @@
 const Response = require('../response/response');
 const RESPONSE_CODE = require('../response/responseCode');
 const axios = require('axios');
+const template = require('../lib/template');
+const secret = process.env.SECRET_KEY;
 const jwt = require('jsonwebtoken');
 
-exports.login = async function(req, res, next) {
+function createToken(payload) {
+    return new Promise((resolve, reject) => {
+        jwt.sign(payload, secret, {
+            expiresIn: '7d'
+        }, (error, token) => {
+            if (error) reject(error);
+            resolve(token);
+        })
+    })
+}
+
+exports.login = function (req, res) {
+    let title = 'Login';
+    let list = template.list(req.list);
+    let control = `
+        <form action="/auth/loginProcess" method="post">
+            <p><input type="text" name="email" placeholder="email"></p>
+            <p><input type="password" name="password" placeholder="password"></p>
+            <p><input type="submit" value="login"></p>
+        </form>`;
+    let html = template.HTML(title, list, control, '');
+    res.send(html);
+};
+
+exports.loginProcess = async function(req, res, next) {
     try {
         let url = 'http://localhost:3000/members';
         let {email, password} = req.body;
@@ -19,16 +45,23 @@ exports.login = async function(req, res, next) {
             next(new Response(RESPONSE_CODE.SUCCESS, data.message, null));
         } else if (data.value[0].password !== password) {
             // 해당 이메일과 비밀번호가 일치하지 않을 때
-            next(new Response(RESPONSE_CODE.SUCCESS, 'password err', null));
+            next(new Response(RESPONSE_CODE.FAIL, 'password err', null));
         }
-        let token = jwt.sign({
-            id: data.value[0].id
-        }, 'keyboard cat');
+        let payload = {
+            id: data.value[0].id,
+            nick: data.value[0].nick
+        };
+        let token = await createToken(payload);
         res.cookie('user', token);
         console.log('?????');
-        console.log(res.session);
-        return res.status(200).json(new Response(RESPONSE_CODE.SUCCESS, 'success', data));
+        console.log(token);
+        return res.redirect(302, '/');
     } catch (err) {
         next(new Response(RESPONSE_CODE.FAIL, 'fail', err));
     }
+}
+
+exports.logout = function(req, res) {
+    res.clearCookie('user');
+    return res.redirect(302, '/');
 }

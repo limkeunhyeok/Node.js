@@ -8,10 +8,12 @@ exports.index = function(req, res) {
     let title = 'Welcome';
     let list = template.list(req.list);
     let control = `<a href="/topic/create">create</a>`;
+    let statusUI = auth.statusUI(req, res);
+    console.log('????', statusUI)
     let body = `
         <h2>${title}</h2> Hello, Node.js
         <img src="/images/hello.jpeg" style="width:300px; display:block; margin-top:10px;">`;
-    let html = template.HTML(title, list, control, body, auth.statusUI(req, res));
+    let html = template.HTML(title, list, control, body, statusUI);
     res.send(html);
 }
 

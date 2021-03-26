@@ -787,3 +787,82 @@
 [2021-03-23T14:15:31.851] [DEBUG] validator - Email validation complete!
 [2021-03-23T14:18:46.276] [DEBUG] members - getMembersList
 [2021-03-23T14:18:46.277] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:04:54.273] [INFO] app - Example app listening on port 3000!
+[2021-03-25T15:05:18.946] [DEBUG] members - getMembersList
+[2021-03-25T15:05:18.954] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:05:29.031] [DEBUG] members - getMembersList
+[2021-03-25T15:05:29.032] [DEBUG] validator - View all members!
+[2021-03-25T15:09:25.338] [DEBUG] members - getMembersList
+[2021-03-25T15:09:25.341] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:10:13.781] [DEBUG] members - getMembersList
+[2021-03-25T15:10:13.782] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:11:19.781] [DEBUG] members - getMembersList
+[2021-03-25T15:11:19.782] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:12:33.175] [DEBUG] members - getMembersList
+[2021-03-25T15:12:33.175] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:12:52.855] [DEBUG] members - getMembersList
+[2021-03-25T15:12:52.855] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:30:57.570] [DEBUG] members - getMembersList
+[2021-03-25T15:30:57.570] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:38:07.372] [DEBUG] members - getMembersList
+[2021-03-25T15:38:07.373] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:39:41.748] [DEBUG] members - getMembersList
+[2021-03-25T15:39:41.748] [DEBUG] validator - Email validation complete!
+[2021-03-25T15:49:08.572] [DEBUG] members - getMembersList
+[2021-03-25T15:49:08.573] [DEBUG] validator - Email validation complete!
+[2021-03-25T16:39:50.655] [DEBUG] members - getMembersList
+[2021-03-25T16:39:50.656] [DEBUG] validator - Email validation complete!
+[2021-03-25T16:40:40.353] [DEBUG] members - getMembersList
+[2021-03-25T16:40:40.354] [DEBUG] validator - Email validation complete!
+[2021-03-25T16:41:08.159] [DEBUG] members - getMembersList
+[2021-03-25T16:41:08.160] [DEBUG] validator - Email validation complete!
+[2021-03-25T16:42:33.741] [DEBUG] members - getMembersList
+[2021-03-25T16:42:33.741] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:26:26.977] [INFO] app - Example app listening on port 3000!
+[2021-03-25T23:26:40.301] [DEBUG] members - getMembersList
+[2021-03-25T23:26:40.309] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:28:09.188] [DEBUG] members - getMembersList
+[2021-03-25T23:28:09.190] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:28:43.825] [DEBUG] members - getMembersList
+[2021-03-25T23:28:43.825] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:32:48.163] [DEBUG] members - getMembersList
+[2021-03-25T23:32:48.164] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:41:43.880] [DEBUG] members - getMembersList
+[2021-03-25T23:41:43.881] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:45:40.885] [DEBUG] members - getMembersList
+[2021-03-25T23:45:40.886] [DEBUG] validator - Email validation complete!
+[2021-03-25T23:45:52.366] [DEBUG] members - getMembersList
+[2021-03-25T23:45:52.366] [DEBUG] validator - Email validation complete!
+[2021-03-26T00:05:46.283] [DEBUG] members - getMembersList
+[2021-03-26T00:05:46.284] [DEBUG] validator - Email validation complete!
+[2021-03-26T00:27:18.834] [DEBUG] members - getMembersList
+[2021-03-26T00:27:18.835] [DEBUG] validator - Email validation complete!
+[2021-03-26T00:31:52.904] [DEBUG] members - getMembersList
+[2021-03-26T00:31:52.904] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:15:19.254] [DEBUG] members - getMembersList
+[2021-03-26T01:15:19.254] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:38:30.721] [DEBUG] members - getMembersList
+[2021-03-26T01:38:30.721] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:40:23.068] [DEBUG] members - getMembersList
+[2021-03-26T01:40:23.069] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:43:01.629] [DEBUG] members - getMembersList
+[2021-03-26T01:43:01.630] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:44:01.377] [DEBUG] members - getMembersList
+[2021-03-26T01:44:01.378] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:50:11.779] [DEBUG] members - getMembersList
+[2021-03-26T01:50:11.779] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:52:54.430] [DEBUG] members - getMembersList
+[2021-03-26T01:52:54.430] [DEBUG] validator - Email validation complete!
+[2021-03-26T01:55:29.086] [DEBUG] members - getMembersList
+[2021-03-26T01:55:29.087] [DEBUG] validator - Email validation complete!
+[2021-03-26T02:03:08.649] [DEBUG] members - getMembersList
+[2021-03-26T02:03:08.649] [DEBUG] validator - Email validation complete!
+[2021-03-26T02:03:54.480] [DEBUG] members - getMembersList
+[2021-03-26T02:03:54.480] [DEBUG] validator - Email validation complete!
+[2021-03-26T02:21:08.202] [DEBUG] members - getMembersList
+[2021-03-26T02:21:08.202] [DEBUG] validator - Email validation complete!
+[2021-03-26T17:52:10.676] [INFO] app - Example app listening on port 3000!
+[2021-03-26T18:05:38.135] [DEBUG] members - getMembersList
+[2021-03-26T18:05:38.142] [DEBUG] validator - Email validation complete!
+[2021-03-26T18:49:03.442] [DEBUG] members - getMembersList
+[2021-03-26T18:49:03.444] [DEBUG] validator - Email validation complete!
