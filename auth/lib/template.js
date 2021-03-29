@@ -1,6 +1,11 @@
 module.exports = {
-    HTML: (title, list, control, body, authStatusUI = '<a href="/auth/login">login</a>') => {
-        return `
+  HTML: (
+    title,
+    list,
+    control,
+    body,
+    authStatusUI = '<a href="/auth/login">login</a>'
+  ) => `
             <!doctype html>
             <html>
                 <head>
@@ -15,23 +20,20 @@ module.exports = {
                     ${body}
                 </body>
             </html>
-            `
-    },
-    list: (files) => {
-        let list = '<ul>';
-        for(var i = 0; i < files.length; i++) {
-            list += `<li><a href="/topic/${files[i]}">${files[i]}</a></li>`;
-        };
-        list += '</ul>';
-        return list;
-    },
-    form: (action, hidden, value, description) => {
-        return `
-        <form action="/topic/${action}_process" method="post">
+            `,
+  list: (files) => {
+    let list = "<ul>";
+    for (let i = 0; i < files.length; i += 1) {
+      list += `<li><a href="/topic/${files[i]}">${files[i]}</a></li>`;
+    }
+    list += "</ul>";
+    return list;
+  },
+  form: (action, hidden, value, description) => `
+        <form action="/topic/${action}" method="post">
             ${hidden}
             <p><input type="text" name="title" placeholder="title" ${value}></p>
             <p><textarea name="description" placeholder="description">${description}</textarea></p>
             <p><input type="submit"></p>
-        </form>`
-    }
-}
+        </form>`,
+};
