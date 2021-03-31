@@ -1,3 +1,4 @@
+// husky는 최신 버전이 아닌 이전 버전, husky@4로 install 할 것
 require("dotenv").config();
 
 const express = require("express");
