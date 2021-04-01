@@ -6,8 +6,9 @@ const opts = {
 
 function test(option) {
   return new Promise((resolve, reject) => {
-    .then((result) => {
-        axios(option)
+    axios(option)
+      .then((result) => {
+        axios(option);
         resolve(result);
       })
       .catch((err) => {
@@ -17,14 +18,14 @@ function test(option) {
 }
 
 async function members(option) {
+  console.log(
+    `------------------------------ ${option.method} ------------------------------`
+  );
   try {
     const res = await test(option);
-    console.log(
-      `------------------------------ ${option.method} ------------------------------`
-    );
     console.log(res.data);
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 }
 
@@ -53,6 +54,15 @@ async function members(option) {
   opts.method = "delete";
   opts.data = {
     email: "LKH@mail.com",
+  };
+  await members(opts);
+
+  // 로그인
+  opts.url = "http://localhost:3000/login";
+  opts.method = "post";
+  opts.data = {
+    email: "lkh2@gmail.com",
+    password: "asd123456",
   };
   await members(opts);
 })();

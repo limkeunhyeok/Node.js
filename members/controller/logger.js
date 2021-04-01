@@ -25,6 +25,9 @@ MyLogger.prototype.debugging = function (req, res, next) {
     case "/unregister":
       msg = "unregister";
       break;
+    case "/login":
+      msg = "login";
+      break;
     default:
       err.status = 404;
       next(err);

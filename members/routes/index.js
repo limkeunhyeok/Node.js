@@ -4,6 +4,7 @@ const router = express.Router();
 const memberManagement = require("../controller/membersController");
 const validator = require("../controller/validator");
 const MyLogger = require("../controller/logger");
+const Auth = require("../controller/auth");
 
 const logger = new MyLogger("members");
 
@@ -25,5 +26,7 @@ router.post(
 
 // 회원 삭제
 router.delete("/members", validator.email, memberManagement.unregister);
+
+router.post("/login", validator.email, validator.password, Auth.login);
 
 module.exports = router;
