@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", members);
 app.use((req, res, next) => {
-  const err = new Response(RESPONSE_CODE.SUCCESS, "Not Found!", null);
+  const err = new Response(RESPONSE_CODE.FAIL, "Not Found!", null);
   err.status = 404;
   next(err);
 });

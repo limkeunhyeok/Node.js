@@ -8,7 +8,7 @@ exports.email = [
     const err = validationResult(req);
     if (!err.isEmpty()) {
       err.status = 400;
-      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid email", err));
+      next(new Response(RESPONSE_CODE.FAIL, "Invalid email", err));
     } else {
       next();
     }
@@ -23,7 +23,7 @@ exports.password = [
     const err = validationResult(req);
     if (!err.isEmpty()) {
       err.status = 400;
-      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid password", err));
+      next(new Response(RESPONSE_CODE.FAIL, "Invalid password", err));
     } else {
       next();
     }

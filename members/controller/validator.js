@@ -14,7 +14,7 @@ exports.email = [
       next();
     } else if (!err.isEmpty()) {
       err.status = 400;
-      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid email", err));
+      next(new Response(RESPONSE_CODE.FAIL, "Invalid email", err));
     } else {
       log.debug("Email validation complete!");
       next();
@@ -30,7 +30,7 @@ exports.password = [
     const err = validationResult(req);
     if (!err.isEmpty()) {
       err.status = 400;
-      next(new Response(RESPONSE_CODE.SUCCESS, "Invalid password", err));
+      next(new Response(RESPONSE_CODE.FAIL, "Invalid password", err));
     } else {
       log.debug("Password validation complete!");
       next();
