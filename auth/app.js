@@ -7,7 +7,7 @@ const helmet = require("helmet");
 const fs = require("fs");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
-const session = require('express-session');
+const session = require("express-session");
 
 const app = express();
 const Response = require("./response/response");
@@ -19,13 +19,15 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
-app.use(session({
-  secret: process.env.SECRET_KEY,
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
-const passport = require('./lib/passport')(app);
+const passport = require("./lib/passport")(app);
 
 app.get("*", (req, res, next) => {
   fs.readdir("./data", (err, files) => {

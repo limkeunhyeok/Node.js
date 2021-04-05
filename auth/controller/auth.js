@@ -1,8 +1,4 @@
 // 참고 https://im-developer.tistory.com/167
-const axios = require("axios");
-
-const Response = require("../response/response");
-const RESPONSE_CODE = require("../response/responseCode");
 const template = require("../lib/template");
 
 exports.loginPage = function (req, res) {

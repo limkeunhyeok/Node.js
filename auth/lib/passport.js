@@ -1,34 +1,36 @@
-const { default: axios } = require('axios');
+const axios = require("axios");
+const passport = require("passport");
+const LocalStategy = require("passport-local").Strategy;
 
-module.exports = function(app) {
-    const passport = require('passport');
-    const LocalStategy = require('passport-local').Strategy;
+module.exports = function (app) {
+  app.use(passport.initialize());
+  app.use(passport.session());
 
-    app.use(passport.initialize());
-    app.use(passport.session());
+  passport.serializeUser((user, done) => {
+    done(null, user);
+  });
+  passport.deserializeUser((user, done) => {
+    done(null, user);
+  });
 
-    passport.serializeUser((user, done) => {
-        done(null, user);
-    });
-    passport.deserializeUser((user, done) => {
-        done(null, user);
-    });
-
-    passport.use(new LocalStategy({
-            usernameField: "email",
-            passwordField: "password"
-        }, async function(username, password, done) {
-            const url = "http://localhost:3000/login";
-            const { data } = await axios.post(url, {
-                email: username,
-                password: password
-            });
-            if (data.code == 1) {
-                return done(null, false);
-            } else {
-                return done(null, data.value.token);
-            }
+  passport.use(
+    new LocalStategy(
+      {
+        usernameField: "email",
+        passwordField: "password",
+      },
+      async (username, password, done) => {
+        const url = "http://localhost:3000/login";
+        const { data } = await axios.post(url, {
+          email: username,
+          password,
+        });
+        if (data.code === 1) {
+          return done(null, false);
         }
-    ));
-    return passport;
-}
+        return done(null, data.value.token);
+      }
+    )
+  );
+  return passport;
+};
