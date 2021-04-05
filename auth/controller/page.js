@@ -72,10 +72,10 @@ exports.dataPage = function (req, res, next) {
   });
 };
 
- exports.preCheck = function(req, res, next) {
-   if (!auth.isOwner(req, res)) {
-     res.redirect(302, "/");
-     return false;
-   }
-   next();
- }
+exports.preCheck = function(req, res, next) {
+  if (!auth.isOwner(req, res)) {
+    res.redirect(302, "/");
+    return false;
+  }
+  next();
+}

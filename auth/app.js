@@ -7,13 +7,11 @@ const helmet = require("helmet");
 const fs = require("fs");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
+const session = require('express-session');
 
 const app = express();
 const Response = require("./response/response");
 const RESPONSE_CODE = require("./response/responseCode");
-const indexRouter = require("./routes/index");
-const topicRouter = require("./routes/topic");
-const authRouter = require("./routes/auth");
 
 app.use(helmet());
 app.use(express.static("public"));
@@ -21,6 +19,13 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: true
+}));
+
+const passport = require('./lib/passport')(app);
 
 app.get("*", (req, res, next) => {
   fs.readdir("./data", (err, files) => {
@@ -28,6 +33,10 @@ app.get("*", (req, res, next) => {
     next();
   });
 });
+
+const indexRouter = require("./routes/index");
+const topicRouter = require("./routes/topic");
+const authRouter = require("./routes/auth")(passport);
 
 app.use("/", indexRouter);
 app.use("/auth", authRouter);

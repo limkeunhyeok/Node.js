@@ -3,14 +3,17 @@ const jwt = require("jsonwebtoken");
 
 module.exports = {
   isOwner(req, res) {
-    const token = req.cookies;
-    return Object.keys(token).length !== 0;
+    if (req.user) {
+      return true;
+    } else {
+      return false;
+    }
   },
   statusUI(req, res) {
     let authStatusUI = '<a href="/auth/login">login</a>';
     if (this.isOwner(req, res)) {
-      const token = req.cookies;
-      const decoded = jwt.verify(token.user, secret);
+      const token = req.user;
+      const decoded = jwt.verify(token, secret);
       authStatusUI = `${decoded.nick} | <a href="/auth/logout">logout</a>`;
     }
     return authStatusUI;

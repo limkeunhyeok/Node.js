@@ -64,7 +64,7 @@ exports.inquiry = async function (req, res, next) {
     }
     return res
       .status(200)
-      .json(new Response(RESPONSE_CODE.SUCCESS, "Unregistered email", null));
+      .json(new Response(RESPONSE_CODE.FAIL, "Unregistered email", null));
   } catch (err) {
     return next(new Response(RESPONSE_CODE.FAIL, "DB Error!", err));
   }

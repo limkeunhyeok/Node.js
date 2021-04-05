@@ -17,23 +17,3 @@ exports.loginPage = function (req, res) {
   const html = template.HTML(title, list, control, "");
   res.send(html);
 };
-
-exports.loginProcess = async function (req, res, next) {
-  try {
-    const url = "http://localhost:3000/login";
-    const { email, password } = req.body;
-    const { data } = await axios.post(url, {
-        email,
-        password
-    });
-    res.cookie("user", data.value.token);
-    return res.redirect(302, "/");
-  } catch (err) {
-    return next(new Response(RESPONSE_CODE.FAIL, "fail", err));
-  }
-};
-
-exports.logout = function (req, res) {
-  res.clearCookie("user");
-  return res.redirect(302, "/");
-};
