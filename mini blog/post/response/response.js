@@ -7,5 +7,5 @@ const Response = function (code, message, value) {
   this.message = message;
   this.value = value;
 };
-  
+
 module.exports = Response;
