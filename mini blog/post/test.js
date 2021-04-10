@@ -4,11 +4,15 @@ const opts = {
   url: "http://localhost:3000/post",
 };
 
+const data = {
+  title: 'Test',
+  body: 'Test is ...'
+};
+
 function test(option) {
   return new Promise((resolve, reject) => {
     axios(option)
       .then((result) => {
-        axios(option);
         resolve(result);
       })
       .catch((err) => {
@@ -17,7 +21,9 @@ function test(option) {
   });
 }
 
-async function post(option) {
+async function post(option, method, data) {
+  option.method = method;
+  option.data = data;
   console.log(
     `------------------------------ ${option.method} ------------------------------`
   );
@@ -31,42 +37,24 @@ async function post(option) {
 
 (async function () {
   // 게시글 조회
-  opts.method = "get";
-  await post(opts);
+  await post(opts, 'get', {});
 
   // 게시글 등록
-  opts.method = "post";
-  opts.data = {
-    title: 'Test',
-    body: 'Test is ...'
-  };
-  await post(opts);
-
+  await post(opts, 'post', data);
+  
   // 게시글 조회
-  opts.method = "get";
-  await post(opts);
+  await post(opts, 'get', {});
 
   // 게시글 수정
-  opts.method = "put";
-  opts.data = {
-    title: 'Test',
-    body: 'Test is good'
-  };
-  await post(opts);
+  data.body = 'Test is good';
+  await post(opts, 'put', data);
 
   // 게시글 조회
-  opts.method = "get";
-  await post(opts);
+  await post(opts, 'get', {});
 
   // 게시글 삭제
-  opts.method = "delete";
-  opts.data = {
-    title: 'Test',
-    body: 'Test is good'
-  };
-  await post(opts);
+  await post(opts, 'delete', data);
 
   // 게시글 조회
-  opts.method = "get";
-  await post(opts);
+  await post(opts, 'get', {});
 })();
