@@ -1,91 +1,124 @@
+const path = require("path");
+
 const Post = require("../models/post");
 const Response = require("../response/response");
 const RESPONSE_CODE = require("../response/responseCode");
 
-exports.create = function (req, res) {
-  const createPost = req.body;
-  Post.create(createPost)
-    .then((createResult) =>
-      res
-        .status(200)
-        .json(
-          new Response(
-            RESPONSE_CODE.SUCCESS,
-            "Created successfully!",
-            createResult
-          )
-        )
-    )
-    .catch((err) =>
-      res
-        .status(500)
-        .json(new Response(RESPONSE_CODE.FAIL, "Creation failure!", err))
-    );
-};
-
-exports.read = function (req, res) {
-  Post.find()
-    .exec()
-    .then((results) =>
-      res
-        .status(200)
-        .json(
-          new Response(RESPONSE_CODE.SUCCESS, "Read successfully!", results)
-        )
-    )
-    .catch((err) =>
-      res
-        .status(500)
-        .json(new Response(RESPONSE_CODE.FAIL, "Read failure", err))
-    );
-};
-
-exports.update = function (req, res) {
-  const { title, body } = req.body;
-  Post.findOne({ title })
-    .exec()
+exports.findAll = function (req, res) {
+  Post.findAll()
     .then((results) => {
-      const updatePost = results;
-      updatePost.body = body;
-      return updatePost.save();
-    })
-    .then((updateResults) =>
       res
         .status(200)
         .json(
-          new Response(
-            RESPONSE_CODE.SUCCESS,
-            "Update successfully!",
-            updateResults
-          )
-        )
-    )
-    .catch((err) =>
+          new Response(RESPONSE_CODE.SUCCESS, "Find all success!", results)
+        );
+    })
+    .catch((err) => {
       res
         .status(500)
-        .json(new Response(RESPONSE_CODE.FAIL, "Update failure", err))
-    );
+        .json(new Response(RESPONSE_CODE.FAIL, "Failed to find all", err));
+    });
 };
 
-exports.delete = function (req, res) {
-  const { title } = req.body;
-  Post.findOne({ title })
-    .exec()
-    .then((results) => results.deleteOne())
-    .then((deleteResults) =>
+exports.findOneByPostId = function (req, res) {
+  const postId = path.parse(req.params.postId).base;
+  Post.findOneByPostId(postId)
+    .then((results) => {
       res
         .status(200)
         .json(
           new Response(
             RESPONSE_CODE.SUCCESS,
-            "Delete successfully!",
-            deleteResults
+            "Success to find one by post ID!",
+            results
           )
-        )
-    )
-    .catch((err) =>
+        );
+    })
+    .catch((err) => {
       res
         .status(500)
-        .json(new Response(RESPONSE_CODE.FAIL, "Delete failure", err))
-    );
+        .json(
+          new Response(RESPONSE_CODE.FAIL, "Failed to find one by post id", err)
+        );
+    });
+};
+
+exports.create = function (req, res) {
+  const data = req.body;
+  Post.create(data)
+    .then((results) => {
+      res
+        .status(200)
+        .json(
+          new Response(RESPONSE_CODE.SUCCESS, "Success to create!", results)
+        );
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json(new Response(RESPONSE_CODE.FAIL, "Failed to create", err));
+    });
+};
+
+exports.updateByPostId = function (req, res) {
+  const postId = path.parse(req.params.postId).base;
+  const data = req.body;
+  Post.updateByPostId(postId, data)
+    .then((results) => {
+      res
+        .status(200)
+        .json(
+          new Response(
+            RESPONSE_CODE.SUCCESS,
+            "Success to update by post ID!",
+            results
+          )
+        );
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json(
+          new Response(RESPONSE_CODE.FAIL, "Failed to update by post ID", err)
+        );
+    });
+};
+
+exports.deleteAll = function (req, res) {
+  Post.deleteAll()
+    .then((results) => {
+      res
+        .status(200)
+        .json(
+          new Response(RESPONSE_CODE.SUCCESS, "Success to delete all!", results)
+        );
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json(new Response(RESPONSE_CODE.FAIL, "Failed to delete all", err));
+    });
+};
+
+exports.deleteByPostId = function (req, res) {
+  const postId = path.parse(req.params.postId).base;
+  Post.deleteByPostId(postId)
+    .then((results) => {
+      res
+        .status(200)
+        .json(
+          new Response(
+            RESPONSE_CODE.SUCCESS,
+            "Success to delete by post ID!",
+            results
+          )
+        );
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json(
+          new Response(RESPONSE_CODE.FAIL, "Failed to delete by post ID", err)
+        );
+    });
 };
