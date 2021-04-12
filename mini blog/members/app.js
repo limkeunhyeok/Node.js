@@ -33,14 +33,14 @@ app.use((err, req, res, next) => {
 
 if (cluster.isMaster) {
   cluster.fork();
-
   cluster.on("exit", (worker, code, signal) => {
     console.log(`worker ${worker.process.pid} died`);
     cluster.fork();
   });
 } else {
-  app.listen(3000, () => {
-    log.info("Example app listening on port 3000!");
-    console.log("Example app listening on port 3000!");
+  const port = process.env.PORT;
+  app.listen(port, () => {
+    log.info(`Example app listening on port ${port}!`);
+    console.log(`Example app listening on port ${port}!`);
   });
 }
