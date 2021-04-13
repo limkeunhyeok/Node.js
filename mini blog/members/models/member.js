@@ -11,6 +11,7 @@ const memberSchema = mongoose.Schema({
   },
   nick: {
     type: String,
+    required: true,
   },
 });
 

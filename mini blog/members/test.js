@@ -1,14 +1,14 @@
+/* eslint-disable no-underscore-dangle */
+require("dotenv").config();
+
 const axios = require("axios");
 
-const opts = {
-  url: "http://localhost:3000/members",
-};
+const port = process.env.PORT;
 
 function test(option) {
   return new Promise((resolve, reject) => {
     axios(option)
       .then((result) => {
-        axios(option);
         resolve(result);
       })
       .catch((err) => {
@@ -17,52 +17,40 @@ function test(option) {
   });
 }
 
-async function members(option) {
+async function member(email, method, data) {
+  const option = {};
+  option.url = `http://localhost:${port}/member/${email}`;
+  option.method = method;
+  option.data = data;
   console.log(
     `------------------------------ ${option.method} ------------------------------`
   );
   try {
     const res = await test(option);
     console.log(res.data);
+    return res.data;
   } catch (error) {
     console.log(error.response.data);
+    return error.response.data;
   }
 }
 
 (async function () {
+  const data = {
+    email: "john@mail.com",
+    password: "password",
+    nick: "john",
+  };
+
   // 회원 전체 조회
-  opts.method = "get";
-  await members(opts);
+  await member("", "get", {});
 
   // 회원 등록
-  opts.method = "post";
-  opts.data = {
-    email: "LKH@mail.com",
-    password: "asd123456",
-    nick: "LKH",
-  };
-  await members(opts);
+  await member("", "post", data);
 
   // 해당 회원 조회
-  opts.method = "get";
-  opts.data = {
-    email: "LKH@mail.com",
-  };
-  await members(opts);
+  await member("john@mail.com", "get", {});
 
   // 해당 회원 삭제
-  opts.method = "delete";
-  opts.data = {
-    email: "LKH@mail.com",
-  };
-  await members(opts);
-
-  // 로그인
-  opts.url = "http://localhost:3000/login";
-  opts.method = "post";
-  opts.data = {
-    email: "lkh2@gmail.com",
-    password: "asd123456",
-  };
-  await members(opts);
+  await member("john@mail.com", "delete", {});
 })();

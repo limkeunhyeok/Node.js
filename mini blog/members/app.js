@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/", members);
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).json(new Response(RESPONSE_CODE.FAIL, "Not found!", null));
 });
 

@@ -1,5 +1,9 @@
 /* eslint-disable no-underscore-dangle */
+require("dotenv").config();
+
 const axios = require("axios");
+
+const port = process.env.PORT;
 
 function test(option) {
   return new Promise((resolve, reject) => {
@@ -15,7 +19,7 @@ function test(option) {
 
 async function post(postId, method, data) {
   const option = {};
-  option.url = `http://localhost:3000/post/${postId}`;
+  option.url = `http://localhost:${port}/post/${postId}`;
   option.method = method;
   option.data = data;
   console.log(
