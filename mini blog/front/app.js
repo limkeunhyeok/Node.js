@@ -2,7 +2,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const fs = require("fs");
 const compression = require("compression");
@@ -16,8 +15,8 @@ const RESPONSE_CODE = require("./response/responseCode");
 app.use(helmet());
 app.use(express.static("public"));
 app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(compression());
 app.use(
   session({
@@ -29,12 +28,13 @@ app.use(
 
 const passport = require("./lib/passport")(app);
 
-app.get("*", (req, res, next) => {
-  fs.readdir("./data", (err, files) => {
-    req.list = files;
-    next();
-  });
-});
+// app.get("*", (req, res, next) => {
+//   fs.readdir("./data", (err, files) => {
+//     req.list = files;
+//     console.log(files);
+//     next();
+//   });
+// });
 
 const indexRouter = require("./routes/index");
 const topicRouter = require("./routes/topic");
@@ -52,6 +52,8 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => res.status(err.status || 500).json(err));
 
-app.listen(3010, () => {
-  console.log("Example app listening on port 3010!");
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`);
 });

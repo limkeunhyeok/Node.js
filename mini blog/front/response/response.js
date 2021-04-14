@@ -8,12 +8,4 @@ const Response = function (code, message, value) {
   this.value = value;
 };
 
-Response.prototype.value = function () {
-  return {
-    code: this.code,
-    message: this.message,
-    value: this.value,
-  };
-};
-
 module.exports = Response;

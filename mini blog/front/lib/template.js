@@ -24,12 +24,12 @@ module.exports = {
   list: (files) => {
     let list = "<ul>";
     for (let i = 0; i < files.length; i += 1) {
-      list += `<li><a href="/topic/${files[i]}">${files[i]}</a></li>`;
+      list += `<li><a href="/topic/${files[i]._id}">${files[i].title}</a></li>`;
     }
     list += "</ul>";
     return list;
   },
-  form: (action, hidden, value, description) => `
+  form: (action, hidden, value, description, post) => `
     <form action="/topic/${action}" method="post">
       ${hidden}
       <p><input type="text" name="title" placeholder="title" ${value}></p>
