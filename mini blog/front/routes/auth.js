@@ -6,6 +6,7 @@ const validator = require("../controller/validator");
 
 module.exports = function (passport) {
   router.get("/login", auth.loginPage);
+  router.get("/signup", auth.signupPage);
   router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/");
@@ -21,5 +22,16 @@ module.exports = function (passport) {
       successFlash: false,
     })
   );
+  router.post(
+    "/signup",
+    validator.email,
+    validator.password,
+    passport.authenticate("local-signup", {
+      successRedirect: "/",
+      failureRedirect: "/auth/signup",
+      failureFlash: false,
+      successFlash: false,
+    })
+  )
   return router;
 };

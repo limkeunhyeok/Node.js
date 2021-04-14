@@ -13,3 +13,17 @@ exports.loginPage = function (req, res) {
   const html = template.HTML(title, list, control, "");
   res.send(html);
 };
+
+exports.signupPage = function (req, res) {
+  const title = "register";
+  const list = template.list(req.list);
+  const control = `
+        <form action="/auth/signup" method="post">
+            <p><input type="text" name="email" placeholder="email"></p>
+            <p><input type="password" name="password" placeholder="password"></p>
+            <p><input type="text" name="nick" placeholder="nick"></p>
+            <p><input type="submit" value="sign up"></p>
+        </form>`;
+  const html = template.HTML(title, list, control, "");
+  res.send(html);
+}

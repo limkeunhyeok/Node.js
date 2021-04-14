@@ -3,7 +3,6 @@ require("dotenv").config();
 
 const express = require("express");
 const helmet = require("helmet");
-const fs = require("fs");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -27,15 +26,6 @@ app.use(
 );
 
 const passport = require("./lib/passport")(app);
-
-// app.get("*", (req, res, next) => {
-//   fs.readdir("./data", (err, files) => {
-//     req.list = files;
-//     console.log(files);
-//     next();
-//   });
-// });
-
 const indexRouter = require("./routes/index");
 const topicRouter = require("./routes/topic");
 const authRouter = require("./routes/auth")(passport);
