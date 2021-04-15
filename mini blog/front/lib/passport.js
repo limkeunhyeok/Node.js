@@ -1,18 +1,26 @@
-const axios = require("axios");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const LocalStategy = require("passport-local").Strategy;
 
+const Service = require("../controller/index");
+
+const memberService = new Service("http://localhost:3010/member/");
+
 const secret = process.env.SECRET_KEY;
 
-function createToken (payload) {
+function createToken(payload) {
   return new Promise((resolve, reject) => {
-    jwt.sign(payload, secret, {
-      expiresIn: "7d",
-    }, (err, token) => {
-      if (err) reject(err);
-      resolve(token);
-    });
+    jwt.sign(
+      payload,
+      secret,
+      {
+        expiresIn: "7d",
+      },
+      (err, token) => {
+        if (err) reject(err);
+        resolve(token);
+      }
+    );
   });
 }
 
@@ -34,44 +42,50 @@ module.exports = function (app) {
         passwordField: "password",
       },
       async (username, password, done) => {
-        const url = `http://localhost:3010/member/${username}`;
-        const { data } = await axios.get(url);
-        if (data.code === 1) {
+        const { code, value } = await memberService.request(
+          username,
+          "get",
+          {}
+        );
+        if (code === 1) {
           return done(null, false);
-        } else if (data.value.password !== password) {
+        }
+        if (value.password !== password) {
           return done(null, false);
         }
         const payload = {
-          nick: data.value.nick,
+          nick: value.nick,
         };
         const token = await createToken(payload);
         return done(null, token);
       }
     )
   );
-  passport.use("local-signup", new LocalStategy(
-    {
-      usernameField : 'email',
-      passwordField : 'password',
-      passReqToCallback : true
-    },
-    async (req, username, password, done) => {
-      const url = "http://localhost:3010/member";
-      const data = {
-        email: username,
-        password: password,
-        nick: req.body.nick
-      };
-      const results = await axios.post(url, data);
-      if (results.data.code === 1) {
-        return done(null, false);
+  passport.use(
+    "local-signup",
+    new LocalStategy(
+      {
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback: true,
+      },
+      async (req, username, password, done) => {
+        const data = {
+          email: username,
+          password,
+          nick: req.body.nick,
+        };
+        const { code, value } = await memberService.request("", "post", data);
+        if (code === 1) {
+          return done(null, false);
+        }
+        const payload = {
+          nick: value.nick,
+        };
+        const token = await createToken(payload);
+        return done(null, token);
       }
-      const payload = {
-        nick: results.data.value.nick,
-      };
-      const token = await createToken(payload);
-      return done(null, token);
-    }
-  ))
+    )
+  );
   return passport;
 };

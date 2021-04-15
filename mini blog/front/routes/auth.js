@@ -1,20 +1,16 @@
 const express = require("express");
 
 const router = express.Router();
-const auth = require("../controller/auth");
 const validator = require("../controller/validator");
 
 module.exports = function (passport) {
-  router.get("/login", auth.loginPage);
-  router.get("/signup", auth.signupPage);
   router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/");
   });
+  router.post("*", validator.email, validator.password);
   router.post(
     "/login",
-    validator.email,
-    validator.password,
     passport.authenticate("local", {
       successRedirect: "/",
       failureRedirect: "/auth/login",
@@ -24,14 +20,12 @@ module.exports = function (passport) {
   );
   router.post(
     "/signup",
-    validator.email,
-    validator.password,
     passport.authenticate("local-signup", {
       successRedirect: "/",
       failureRedirect: "/auth/signup",
       failureFlash: false,
       successFlash: false,
     })
-  )
+  );
   return router;
 };

@@ -2,37 +2,15 @@ const path = require("path");
 const sanitizeHTML = require("sanitize-html");
 const template = require("../lib/template");
 const auth = require("../lib/auth");
-const axios = require("axios");
+const Service = require("./index");
 
-function apiCall(option) {
-  return new Promise((resolve, reject) => {
-    axios(option)
-      .then((results) => {
-        resolve(results);
-      }).catch((err) => {
-        reject(err);
-      });
-  })
-}
+const postService = new Service("http://localhost:3020/post/");
 
-async function postController(postId, method, data) {
-  const option = {};
-  option.url = `http://localhost:3020/post/${postId}`;
-  option.method = method;
-  option.data = data;
-  try {
-    const res = await apiCall(option);
-    return res.data;
-  } catch (error) {
-    return error.response.data;
-  }
-}
-
-exports.list = async function(req, res, next) {
-  const results = await postController("", "get", {});
+exports.list = async function (req, res, next) {
+  const results = await postService.request("", "get", {});
   req.list = results.value;
-  next()
-}
+  next();
+};
 
 exports.index = function (req, res) {
   const title = "Welcome";
@@ -58,25 +36,20 @@ exports.create = function (req, res) {
 
 exports.update = async function (req, res) {
   const filteredId = path.parse(req.params.updateId).base;
-  const results = await postController(filteredId, "get", {});
+  const results = await postService.request(filteredId, "get", {});
   const { title, body } = results.value;
   const list = template.list(req.list);
   const control = "";
   const hidden = `<input type="hidden" name="id" value="${filteredId}">`;
   const statusUI = auth.statusUI(req, res);
-  const post = template.form(
-    "update",
-    hidden,
-    `value="${title}"`,
-    body
-  );
+  const post = template.form("update", hidden, `value="${title}"`, body);
   const html = template.HTML(title, list, control, post, statusUI);
   res.send(html);
 };
 
-exports.dataPage = async function (req, res, next) {
+exports.dataPage = async function (req, res) {
   const filteredId = path.parse(req.params.pageId).base;
-  const results = await postController(filteredId, "get", {});
+  const results = await postService.request(filteredId, "get", {});
   const { title, body } = results.value;
   const sanitizedTitle = sanitizeHTML(title);
   const sanitizedDescription = sanitizeHTML(body, {
@@ -96,10 +69,31 @@ exports.dataPage = async function (req, res, next) {
   res.send(html);
 };
 
-// exports.preCheck = function (req, res, next) {
-//   if (!auth.isOwner(req, res)) {
-//     res.redirect(302, "/");
-//     return false;
-//   }
-//   return next();
-// };
+exports.login = function (req, res) {
+  const title = "Login";
+  const list = template.list(req.list);
+  const statusUI = auth.statusUI(req, res);
+  const control = `
+        <form action="/auth/login" method="post">
+            <p><input type="text" name="email" placeholder="email"></p>
+            <p><input type="password" name="password" placeholder="password"></p>
+            <p><input type="submit" value="login"></p>
+        </form>`;
+  const html = template.HTML(title, list, control, "", statusUI);
+  res.send(html);
+};
+
+exports.signup = function (req, res) {
+  const title = "register";
+  const list = template.list(req.list);
+  const statusUI = auth.statusUI(req, res);
+  const control = `
+        <form action="/auth/signup" method="post">
+            <p><input type="text" name="email" placeholder="email"></p>
+            <p><input type="password" name="password" placeholder="password"></p>
+            <p><input type="text" name="nick" placeholder="nick"></p>
+            <p><input type="submit" value="sign up"></p>
+        </form>`;
+  const html = template.HTML(title, list, control, "", statusUI);
+  res.send(html);
+};

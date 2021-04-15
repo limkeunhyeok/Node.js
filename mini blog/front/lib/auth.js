@@ -9,7 +9,8 @@ module.exports = {
     return false;
   },
   statusUI(req, res) {
-    let authStatusUI = '<a href="/auth/login">login</a> | <a href="/auth/signup">sign up</a>';
+    let authStatusUI =
+      '<a href="/login">login</a> | <a href="/signup">sign up</a>';
     if (this.isOwner(req, res)) {
       const token = req.user;
       const decoded = jwt.verify(token, secret);
