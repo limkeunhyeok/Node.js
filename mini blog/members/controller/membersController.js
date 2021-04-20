@@ -15,7 +15,7 @@ exports.findAll = function (req, res) {
     })
     .catch((err) => {
       msg = "Failed to find all";
-      Logger.error(msg);
+      Logger.error(err);
       res.status(500).json(new Response(RESPONSE_CODE.FAIL, msg, err));
     });
 };
@@ -31,7 +31,7 @@ exports.findOneByEmail = function (req, res) {
     })
     .catch((err) => {
       msg = "Failed to find one by email";
-      Logger.error(msg);
+      Logger.error(err);
       res.status(500).json(new Response(RESPONSE_CODE.FAIL, msg, err));
     });
 };
@@ -47,7 +47,7 @@ exports.create = function (req, res) {
     })
     .catch((err) => {
       msg = "Failed to create";
-      Logger.error(msg);
+      Logger.error(err);
       res.status(500).json(new Response(RESPONSE_CODE.FAIL, msg, err));
     });
 };
@@ -62,7 +62,7 @@ exports.deleteAll = function (req, res) {
     })
     .catch((err) => {
       msg = "Failed to delete all";
-      Logger.error(msg);
+      Logger.error(err);
       res.status(500).json(new Response(RESPONSE_CODE.FAIL, msg, err));
     });
 };
@@ -78,7 +78,7 @@ exports.deleteByEmail = function (req, res) {
     })
     .catch((err) => {
       msg = "Failed to delete by email";
-      Logger.error(msg);
+      Logger.error(err);
       res.status(500).json(new Response(RESPONSE_CODE.FAIL, msg, err));
     });
 };
