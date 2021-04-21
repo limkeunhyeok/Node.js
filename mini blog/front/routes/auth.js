@@ -20,7 +20,7 @@ module.exports = function (passport) {
     },
     passport.authenticate("local", {
       successRedirect: "/",
-      failureRedirect: "/auth/login",
+      failureRedirect: "/login",
       failureFlash: false,
       successFlash: false,
     })
@@ -33,7 +33,7 @@ module.exports = function (passport) {
     },
     passport.authenticate("local-signup", {
       successRedirect: "/",
-      failureRedirect: "/auth/signup",
+      failureRedirect: "/signup",
       failureFlash: false,
       successFlash: false,
     })

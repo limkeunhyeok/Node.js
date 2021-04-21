@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
+const bcrypt = require("bcrypt");
 const LocalStategy = require("passport-local").Strategy;
 const logger = require("log4js").getLogger("passport");
 
@@ -56,16 +57,22 @@ module.exports = function (app) {
           {}
         );
         if (code === 1) {
-          return done(null, false);
+          done(null, false);
         }
-        if (value.password !== password) {
-          return done(null, false);
-        }
-        const payload = {
-          nick: value.nick,
-        };
-        const token = await createToken(payload);
-        return done(null, token);
+        bcrypt
+          .compare(password, value.password)
+          .then(async (res) => {
+            logger.debug("Password comparison");
+            if (!res) {
+              done(null, false);
+            }
+            const payload = {
+              nick: value.nick,
+            };
+            const token = await createToken(payload);
+            done(null, token);
+          })
+          .catch((err) => done(null, false));
       }
     )
   );
@@ -77,22 +84,32 @@ module.exports = function (app) {
         passwordField: "password",
         passReqToCallback: true,
       },
-      async (req, username, password, done) => {
+      (req, username, password, done) => {
         logger.debug("LocalStrategy: signup");
-        const data = {
-          email: username,
-          password,
-          nick: req.body.nick,
-        };
-        const { code, value } = await memberService.request("", "post", data);
-        if (code === 1) {
-          return done(null, false);
-        }
-        const payload = {
-          nick: value.nick,
-        };
-        const token = await createToken(payload);
-        return done(null, token);
+        bcrypt
+          .hash(password, 10)
+          .then(async (hash) => {
+            logger.debug("Password hashing");
+            const data = {
+              email: username,
+              password: hash,
+              nick: req.body.nick,
+            };
+            const { code, value } = await memberService.request(
+              "",
+              "post",
+              data
+            );
+            if (code === 1) {
+              return done(null, false);
+            }
+            const payload = {
+              nick: value.nick,
+            };
+            const token = await createToken(payload);
+            return done(null, token);
+          })
+          .catch((err) => done(null, false));
       }
     )
   );
