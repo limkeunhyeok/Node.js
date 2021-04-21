@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const LocalStategy = require("passport-local").Strategy;
+const logger = require("log4js").getLogger("passport");
 
 const Service = require("../controller/index");
 
@@ -17,7 +18,11 @@ function createToken(payload) {
         expiresIn: "7d",
       },
       (err, token) => {
-        if (err) reject(err);
+        if (err) {
+          logger.error(err);
+          reject(err);
+        }
+        logger.debug("Create token!");
         resolve(token);
       }
     );
@@ -29,9 +34,11 @@ module.exports = function (app) {
   app.use(passport.session());
 
   passport.serializeUser((user, done) => {
+    logger.debug("serializeUser:", user);
     done(null, user);
   });
   passport.deserializeUser((user, done) => {
+    logger.debug("deserializeUser:", user);
     done(null, user);
   });
 
@@ -42,6 +49,7 @@ module.exports = function (app) {
         passwordField: "password",
       },
       async (username, password, done) => {
+        logger.debug("LocalStrategy: login");
         const { code, value } = await memberService.request(
           username,
           "get",
@@ -70,6 +78,7 @@ module.exports = function (app) {
         passReqToCallback: true,
       },
       async (req, username, password, done) => {
+        logger.debug("LocalStrategy: signup");
         const data = {
           email: username,
           password,

@@ -6,12 +6,19 @@ const helmet = require("helmet");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
+const log4js = require("log4js");
+const cluster = require("cluster");
 
-const app = express();
 const Response = require("./response/response");
 const RESPONSE_CODE = require("./response/responseCode");
 
+const log = log4js.getLogger("app");
+const app = express();
+
+log4js.configure(`${__dirname}/config/logConfig.json`);
+
 app.use(helmet());
+app.use(log4js.connectLogger(log4js.getLogger("http"), { level: "auto" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 app.use(express.json());
@@ -40,10 +47,20 @@ app.use((req, res, next) => {
   next(err);
 });
 
-app.use((err, req, res, next) => res.status(err.status || 500).json(err));
-
-const port = process.env.PORT;
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+app.use((err, req, res, next) => {
+  log.error(err.message);
+  res.status(err.status || 500).json(err);
 });
+
+if (cluster.isMaster) {
+  cluster.fork();
+  cluster.on("exit", (worker, code, signal) => {
+    log.info(`worker ${worker.process.pid} died`);
+    cluster.fork();
+  });
+} else {
+  const port = process.env.PORT;
+  app.listen(port, () => {
+    log.info(`Example app listening on port ${port}!`);
+  });
+}

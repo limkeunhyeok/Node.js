@@ -1,4 +1,5 @@
 const { check, validationResult } = require("express-validator");
+const logger = require("log4js").getLogger("validator");
 const Response = require("../response/response");
 const RESPONSE_CODE = require("../response/responseCode");
 
@@ -10,6 +11,7 @@ exports.email = [
       err.status = 400;
       next(new Response(RESPONSE_CODE.FAIL, "Invalid email", err));
     } else {
+      logger.debug("Email validation complete!");
       next();
     }
   },
@@ -25,6 +27,7 @@ exports.password = [
       err.status = 400;
       next(new Response(RESPONSE_CODE.FAIL, "Invalid password", err));
     } else {
+      logger.debug("Password validation complete!");
       next();
     }
   },
