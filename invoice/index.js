@@ -1,31 +1,68 @@
 const { createInvoice } = require("./createInvoice.js");
 
-const invoice = {
-  shipping: {
-    name: "John Doe",
-    address: "1234 Main Street",
-    city: "San Francisco",
-    state: "CA",
-    country: "US",
-    postal_code: 94111
+const data = {
+  invoiceNumber: "KR-202106-1-001",
+  userInfo: {
+    name: "ChangBeom Cho",
+    account: "ckdekfdl5788@gmail.com",
+    periodFrom: "2021-05-15",
+    periodTo: "2021-06-14",
+    dueDate: "2021-06-15",
   },
   items: [
     {
-      item: "TC 100",
-      description: "Toner Cartridge",
-      quantity: 2,
-      amount: 6000
+      marketplace: "US",
+      filters: ["ASIN", "ACOS"],
+      amount: "60.6"
     },
     {
-      item: "USB_EXT",
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    }
+      marketplace: "MX",
+      filters: ["ASIN", "ACOS"],
+      amount: "2.48"
+    },
+    {
+      marketplace: "CA",
+      filters: ["ASIN", "ACOS"],
+      amount: "1.5"
+    },
+    {
+      marketplace: "US",
+      filters: ["ASIN", "ACOS"],
+      amount: "60.6"
+    },
+    {
+      marketplace: "MX",
+      filters: ["ASIN", "ACOS"],
+      amount: "2.48"
+    },
+    {
+      marketplace: "CA",
+      filters: ["ASIN", "ACOS"],
+      amount: "1.5"
+    },
+    {
+      marketplace: "CA",
+      filters: ["ASIN", "ACOS"],
+      amount: "1.5"
+    },
+    {
+      marketplace: "MX",
+      filters: ["ASIN", "ACOS"],
+      amount: "2.48"
+    },
+    {
+      marketplace: "CA",
+      filters: ["ASIN", "ACOS"],
+      amount: "1.5"
+    },
+    {
+      marketplace: "CA",
+      filters: ["ASIN", "ACOS"],
+      amount: "1.5"
+    },
   ],
-  subtotal: 8000,
-  paid: 0,
-  invoice_nr: 1234
-};
+  total: "64.58"
+}
 
-createInvoice(invoice, "invoice.pdf");
+
+createInvoice(data, "invoice.pdf");
