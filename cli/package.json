@@ -1,0 +1,11 @@
+{
+  "name": "node-cli",
+  "version": "1.0.0",
+  "description": "TEST",
+  "main": "index.js",
+  "author": "LKH",
+  "license": "ISC",
+  "bin": {
+    "cli": "./template.js"
+  }
+}
