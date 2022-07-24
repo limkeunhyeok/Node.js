@@ -1,4 +1,5 @@
 import express from 'express';
+import { writeCsvFile } from './csv/csv';
 import { getExcelJsonData } from './data-generate';
 import { getWorkbookWithExcelJS, writeExcelFile } from './excel/excel';
 import { getWorkBookAoa } from './xlsx/xlsx-array';
@@ -36,16 +37,27 @@ app.post('/xlsx-json', (req, res) => {
   })
 });
 
-app.get('/test', async (req, res) => {
+app.post('/excel', async (req, res) => {
   const { name } = req.body;
   const rawData = getExcelJsonData();
   const workbook = getWorkbookWithExcelJS(rawData);
   await writeExcelFile(workbook, name);
-  res.download('./exceljs.xlsx', (err) => {
+  res.download(`./${name}`, (err) => {
     if (err) {
       res.send(err);
     }
     deleteExcelFile(`./${name}`);
+  })
+})
+
+app.post('/csv', async (req, res) => {
+  const { name } = req.body;
+  const rawData = getExcelJsonData();
+  await writeCsvFile(name)(rawData);
+  res.download(`${name}.csv`, (err) => {
+    if (err) {
+      res.send(err);
+    }
   })
 })
 
