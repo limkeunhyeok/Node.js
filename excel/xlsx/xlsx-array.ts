@@ -1,6 +1,6 @@
 import * as xlsx from 'xlsx';
 import { getWorkBook } from './xlsx-common';
-import { getExcelArrayData } from './data-generate';
+import { getExcelArrayData } from '../data-generate';
 
 export function getWorkSheetForArray() {
   const arrayData = getExcelArrayData();
